@@ -1,6 +1,6 @@
-name: jaffleshop
+name: dbt-poc
 
-profile: jaffleshop
+profile: dbt-poc
 
 version: '1.0'
 
