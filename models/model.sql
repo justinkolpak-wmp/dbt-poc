@@ -1,1 +1,1 @@
-SELECT * FROM table
+SELECT * FROM table_abc
