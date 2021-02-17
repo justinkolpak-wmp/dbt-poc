@@ -1,1 +1,1 @@
-SELECT * FROM table_abc
+SELECT * FROM table_jbk
