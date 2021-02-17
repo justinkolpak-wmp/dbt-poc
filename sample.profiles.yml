@@ -1,5 +1,4 @@
-
-jaffleshop:
+dbt-poc:
   outputs:
     dev:
       type: snowflake
