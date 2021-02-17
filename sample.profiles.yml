@@ -1,4 +1,4 @@
-dbt-poc:
+dbt_poc:
   outputs:
     dev:
       type: snowflake

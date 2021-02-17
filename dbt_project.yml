@@ -1,10 +1,10 @@
-name: dbt-poc
+name: 'dbtpoc'
 
-profile: dbt-poc
+profile: 'dbt_poc'
 
 version: '1.0'
 
-require-dbt-version: ">=0.14.0"
+require-dbt-version: ">=0.16.0"
 
 source-paths: ["models"]
 analysis-paths: ["analysis"]
