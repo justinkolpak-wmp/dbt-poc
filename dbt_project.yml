@@ -1,6 +1,6 @@
 name: 'dbtpoc'
 
-profile: 'dbt_poc'
+profile: 'dbtpoc'
 
 version: '1.0'
 
@@ -27,8 +27,6 @@ quoting:
 models:
   transient: true
 
-on-run-end:
-  - "{{ grant_select_on_schemas(schemas, 'reporter') }}"
-  - "{{ grant_select_on_schemas(schemas, 'transformer') }}"
+
 
 

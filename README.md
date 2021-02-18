@@ -1,12 +1,11 @@
-# jaffleshop-dbt
+# DBT PROOF OF CONCEPT WOO!
 
-dbt models for jaffleshop
+dbt Models
 
 ## Getting started
 1. Clone this github repo
 2. Install dbt following [these instructions](https://docs.getdbt.com/docs/installation)
 3. Ask your database administrator for a set of snowflake credentials.
-
 
 
   The database administrator should run the following statements from a super user account to create your account.
