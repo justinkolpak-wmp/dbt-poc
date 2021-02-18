@@ -1,3 +1,5 @@
+{{ config(materialized='table') }}
+
 SELECT S_SUPPKEY AS SUPPLIER_KEY
     , S_NAME AS SUPPLIER_NAME
     , S_ADDRESS AS SUPPLIER_ADDRESS

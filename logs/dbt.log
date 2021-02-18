@@ -1457,3 +1457,1403 @@ LEFT JOIN "SNOWFLAKE_SAMPLE_DATA"."TPCH_SF10"."REGION" R ON N.N_REGIONKEY = R.R_
 Done. PASS=1 WARN=0 ERROR=0 SKIP=0 TOTAL=1
 2021-02-18 00:05:14.435964 (MainThread): Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000017FEC98BD08>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000017FEA3EB2C8>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000017FEC6753C8>]}
 2021-02-18 00:05:14.435964 (MainThread): Flushing usage events
+2021-02-18 01:24:43.139221 (MainThread): Running with dbt=0.18.0
+2021-02-18 01:24:45.377926 (MainThread): running dbt with arguments Namespace(cls=<class 'dbt.task.list.ListTask'>, debug=False, defer=None, exclude=None, log_cache_events=False, log_format='default', models=None, output='selector', partial_parse=None, profile=None, profiles_dir='C:\\Users\\jkolpak\\.dbt', project_dir=None, record_timing_info=None, resource_types=[], rpc_method=None, select=None, selector_name=None, single_threaded=True, state=None, strict=False, target=None, test_new_parser=False, use_cache=True, use_colors=None, vars='{}', warn_error=False, which='list', write_json=True)
+2021-02-18 01:24:45.379920 (MainThread): Tracking: tracking
+2021-02-18 01:24:45.379920 (MainThread): Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001E32E9AB3C8>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001E32E9ABB88>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001E32E9A12C8>]}
+2021-02-18 01:24:45.402564 (MainThread): Partial parsing not enabled
+2021-02-18 01:24:45.403642 (MainThread): Parsing macros\get_custom_schema.sql
+2021-02-18 01:24:45.406552 (MainThread): Parsing macros\grant_select_on_schemas.sql
+2021-02-18 01:24:45.412537 (MainThread): Parsing macros\adapters.sql
+2021-02-18 01:24:45.447122 (MainThread): Parsing macros\catalog.sql
+2021-02-18 01:24:45.450149 (MainThread): Parsing macros\materializations\incremental.sql
+2021-02-18 01:24:45.462605 (MainThread): Parsing macros\materializations\merge.sql
+2021-02-18 01:24:45.466695 (MainThread): Parsing macros\materializations\table.sql
+2021-02-18 01:24:45.472731 (MainThread): Parsing macros\materializations\view.sql
+2021-02-18 01:24:45.485058 (MainThread): Parsing macros\core.sql
+2021-02-18 01:24:45.490664 (MainThread): Parsing macros\adapters\common.sql
+2021-02-18 01:24:45.549119 (MainThread): Parsing macros\etc\datetime.sql
+2021-02-18 01:24:45.560040 (MainThread): Parsing macros\etc\get_custom_alias.sql
+2021-02-18 01:24:45.561996 (MainThread): Parsing macros\etc\get_custom_database.sql
+2021-02-18 01:24:45.565161 (MainThread): Parsing macros\etc\get_custom_schema.sql
+2021-02-18 01:24:45.571971 (MainThread): Parsing macros\etc\is_incremental.sql
+2021-02-18 01:24:45.577954 (MainThread): Parsing macros\etc\query.sql
+2021-02-18 01:24:45.581946 (MainThread): Parsing macros\materializations\helpers.sql
+2021-02-18 01:24:45.610867 (MainThread): Parsing macros\materializations\common\merge.sql
+2021-02-18 01:24:45.665529 (MainThread): Parsing macros\materializations\incremental\helpers.sql
+2021-02-18 01:24:45.672367 (MainThread): Parsing macros\materializations\incremental\incremental.sql
+2021-02-18 01:24:45.687672 (MainThread): Parsing macros\materializations\seed\seed.sql
+2021-02-18 01:24:45.711038 (MainThread): Parsing macros\materializations\snapshot\snapshot.sql
+2021-02-18 01:24:45.743941 (MainThread): Parsing macros\materializations\snapshot\snapshot_merge.sql
+2021-02-18 01:24:45.746933 (MainThread): Parsing macros\materializations\snapshot\strategies.sql
+2021-02-18 01:24:45.769872 (MainThread): Parsing macros\materializations\table\table.sql
+2021-02-18 01:24:45.778143 (MainThread): Parsing macros\materializations\view\create_or_replace_view.sql
+2021-02-18 01:24:45.785006 (MainThread): Parsing macros\materializations\view\view.sql
+2021-02-18 01:24:45.802218 (MainThread): Parsing macros\schema_tests\accepted_values.sql
+2021-02-18 01:24:45.810241 (MainThread): Parsing macros\schema_tests\not_null.sql
+2021-02-18 01:24:45.815182 (MainThread): Parsing macros\schema_tests\relationships.sql
+2021-02-18 01:24:45.821688 (MainThread): Parsing macros\schema_tests\unique.sql
+2021-02-18 01:24:45.837969 (MainThread): * Deprecation Warning: dbt v0.17.0 introduces a new config format for the
+dbt_project.yml file. Support for the existing version 1 format will be removed
+in a future release of dbt. The following packages are currently configured with
+config version 1:
+ - dbtpoc
+
+For upgrading instructions, consult the documentation:
+  https://docs.getdbt.com/docs/guides/migration-guide/upgrading-to-0-17-0
+
+2021-02-18 01:24:45.860632 (MainThread): Sending event: {'category': 'dbt', 'action': 'deprecation', 'label': 'fe5ceade-2a6f-4173-9f41-41fbaacfdd82', 'property_': 'warn', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001E32EA096C8>]}
+2021-02-18 01:24:45.862391 (MainThread): Partial parsing not enabled
+2021-02-18 01:24:45.936651 (MainThread): Acquiring new snowflake connection "model.dbtpoc.model".
+2021-02-18 01:24:46.115962 (MainThread): Found 1 model, 0 tests, 0 snapshots, 0 analyses, 145 macros, 0 operations, 0 seed files, 0 sources
+2021-02-18 01:24:46.117217 (MainThread): Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001E32EC37808>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001E32EC405C8>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001E32EC40508>]}
+2021-02-18 01:24:46.117217 (MainThread): Flushing usage events
+2021-02-18 01:24:46.667526 (MainThread): Connection 'model.dbtpoc.model' was properly closed.
+2021-02-18 01:38:17.315537 (MainThread): Running with dbt=0.18.0
+2021-02-18 01:38:19.510952 (MainThread): running dbt with arguments Namespace(cls=<class 'dbt.task.run.RunTask'>, debug=False, defer=None, exclude=None, fail_fast=False, full_refresh=False, log_cache_events=False, log_format='default', models=None, partial_parse=None, profile=None, profiles_dir='C:\\Users\\jkolpak\\.dbt', project_dir=None, record_timing_info=None, rpc_method='run', selector_name=None, single_threaded=False, state=None, strict=False, target=None, test_new_parser=False, threads=None, use_cache=True, use_colors=None, vars='{}', version_check=True, warn_error=False, which='run', write_json=True)
+2021-02-18 01:38:19.535078 (MainThread): Tracking: tracking
+2021-02-18 01:38:19.536075 (MainThread): Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002154CEB9608>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002155162FE08>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000215516331C8>]}
+2021-02-18 01:38:19.579656 (MainThread): Partial parsing not enabled
+2021-02-18 01:38:19.580653 (MainThread): Parsing macros\get_custom_schema.sql
+2021-02-18 01:38:19.580885 (MainThread): Parsing macros\grant_select_on_schemas.sql
+2021-02-18 01:38:19.585442 (MainThread): Parsing macros\adapters.sql
+2021-02-18 01:38:19.658753 (MainThread): Parsing macros\catalog.sql
+2021-02-18 01:38:19.666751 (MainThread): Parsing macros\materializations\incremental.sql
+2021-02-18 01:38:19.692546 (MainThread): Parsing macros\materializations\merge.sql
+2021-02-18 01:38:19.699042 (MainThread): Parsing macros\materializations\table.sql
+2021-02-18 01:38:19.711209 (MainThread): Parsing macros\materializations\view.sql
+2021-02-18 01:38:19.726303 (MainThread): Parsing macros\core.sql
+2021-02-18 01:38:19.738613 (MainThread): Parsing macros\adapters\common.sql
+2021-02-18 01:38:19.821318 (MainThread): Parsing macros\etc\datetime.sql
+2021-02-18 01:38:19.845529 (MainThread): Parsing macros\etc\get_custom_alias.sql
+2021-02-18 01:38:19.847250 (MainThread): Parsing macros\etc\get_custom_database.sql
+2021-02-18 01:38:19.851675 (MainThread): Parsing macros\etc\get_custom_schema.sql
+2021-02-18 01:38:19.858229 (MainThread): Parsing macros\etc\is_incremental.sql
+2021-02-18 01:38:19.861213 (MainThread): Parsing macros\etc\query.sql
+2021-02-18 01:38:19.865202 (MainThread): Parsing macros\materializations\helpers.sql
+2021-02-18 01:38:19.880146 (MainThread): Parsing macros\materializations\common\merge.sql
+2021-02-18 01:38:19.909672 (MainThread): Parsing macros\materializations\incremental\helpers.sql
+2021-02-18 01:38:19.916720 (MainThread): Parsing macros\materializations\incremental\incremental.sql
+2021-02-18 01:38:19.947526 (MainThread): Parsing macros\materializations\seed\seed.sql
+2021-02-18 01:38:20.037501 (MainThread): Parsing macros\materializations\snapshot\snapshot.sql
+2021-02-18 01:38:20.130413 (MainThread): Parsing macros\materializations\snapshot\snapshot_merge.sql
+2021-02-18 01:38:20.136302 (MainThread): Parsing macros\materializations\snapshot\strategies.sql
+2021-02-18 01:38:20.176000 (MainThread): Parsing macros\materializations\table\table.sql
+2021-02-18 01:38:20.211486 (MainThread): Parsing macros\materializations\view\create_or_replace_view.sql
+2021-02-18 01:38:20.240216 (MainThread): Parsing macros\materializations\view\view.sql
+2021-02-18 01:38:20.265529 (MainThread): Parsing macros\schema_tests\accepted_values.sql
+2021-02-18 01:38:20.275462 (MainThread): Parsing macros\schema_tests\not_null.sql
+2021-02-18 01:38:20.280497 (MainThread): Parsing macros\schema_tests\relationships.sql
+2021-02-18 01:38:20.284486 (MainThread): Parsing macros\schema_tests\unique.sql
+2021-02-18 01:38:20.302647 (MainThread): * Deprecation Warning: dbt v0.17.0 introduces a new config format for the
+dbt_project.yml file. Support for the existing version 1 format will be removed
+in a future release of dbt. The following packages are currently configured with
+config version 1:
+ - dbtpoc
+
+For upgrading instructions, consult the documentation:
+  https://docs.getdbt.com/docs/guides/migration-guide/upgrading-to-0-17-0
+
+2021-02-18 01:38:20.304614 (MainThread): Sending event: {'category': 'dbt', 'action': 'deprecation', 'label': '70a5e6cb-a33f-4584-9af3-55a6e4e5c144', 'property_': 'warn', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000021551687F08>]}
+2021-02-18 01:38:20.305874 (MainThread): Partial parsing not enabled
+2021-02-18 01:38:20.465731 (MainThread): Acquiring new snowflake connection "model.dbtpoc.DimSupplier".
+2021-02-18 01:38:20.501670 (MainThread): Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000215517F3188>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000215517F3148>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000215517F30C8>]}
+2021-02-18 01:38:20.502094 (MainThread): Flushing usage events
+2021-02-18 01:38:21.603550 (MainThread): Connection 'model.dbtpoc.DimSupplier' was properly closed.
+2021-02-18 01:38:21.604547 (MainThread): Encountered an error:
+2021-02-18 01:38:21.886140 (MainThread): Compilation Error in model DimSupplier (models\DimSupplier.sql)
+  unexpected '}', expected ')'
+    line 1
+      {{ config(materialized='table' }}
+2021-02-18 01:38:21.901069 (MainThread): Traceback (most recent call last):
+  File "c:\users\jkolpak\dbt-venv\lib\site-packages\dbt\clients\jinja.py", line 496, in catch_jinja
+    yield
+  File "c:\users\jkolpak\dbt-venv\lib\site-packages\dbt\clients\jinja.py", line 523, in get_template
+    return env.from_string(template_source, globals=ctx)
+  File "c:\users\jkolpak\dbt-venv\lib\site-packages\jinja2\environment.py", line 941, in from_string
+    return cls.from_code(self, self.compile(source), globals, None)
+  File "c:\users\jkolpak\dbt-venv\lib\site-packages\jinja2\environment.py", line 638, in compile
+    self.handle_exception(source=source_hint)
+  File "c:\users\jkolpak\dbt-venv\lib\site-packages\jinja2\environment.py", line 832, in handle_exception
+    reraise(*rewrite_traceback_stack(source=source))
+  File "c:\users\jkolpak\dbt-venv\lib\site-packages\jinja2\_compat.py", line 28, in reraise
+    raise value.with_traceback(tb)
+  File "<unknown>", line 1, in template
+jinja2.exceptions.TemplateSyntaxError: unexpected '}', expected ')'
+  line 1
+    {{ config(materialized='table' }}
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "c:\users\jkolpak\dbt-venv\lib\site-packages\dbt\main.py", line 124, in main
+    results, succeeded = handle_and_check(args)
+  File "c:\users\jkolpak\dbt-venv\lib\site-packages\dbt\main.py", line 202, in handle_and_check
+    task, res = run_from_args(parsed)
+  File "c:\users\jkolpak\dbt-venv\lib\site-packages\dbt\main.py", line 255, in run_from_args
+    results = task.run()
+  File "c:\users\jkolpak\dbt-venv\lib\site-packages\dbt\task\runnable.py", line 399, in run
+    self._runtime_initialize()
+  File "c:\users\jkolpak\dbt-venv\lib\site-packages\dbt\task\runnable.py", line 118, in _runtime_initialize
+    super()._runtime_initialize()
+  File "c:\users\jkolpak\dbt-venv\lib\site-packages\dbt\task\runnable.py", line 78, in _runtime_initialize
+    self.load_manifest()
+  File "c:\users\jkolpak\dbt-venv\lib\site-packages\dbt\task\runnable.py", line 65, in load_manifest
+    self.manifest = get_full_manifest(self.config)
+  File "c:\users\jkolpak\dbt-venv\lib\site-packages\dbt\perf_utils.py", line 31, in get_full_manifest
+    adapter.connections.set_query_header,
+  File "c:\users\jkolpak\dbt-venv\lib\site-packages\dbt\parser\manifest.py", line 678, in load_manifest
+    return ManifestLoader.load_all(config, macro_manifest, macro_hook)
+  File "c:\users\jkolpak\dbt-venv\lib\site-packages\dbt\parser\manifest.py", line 348, in load_all
+    loader.load(macro_manifest=macro_manifest)
+  File "c:\users\jkolpak\dbt-venv\lib\site-packages\dbt\parser\manifest.py", line 204, in load
+    self.parse_project(project, macro_manifest, old_results)
+  File "c:\users\jkolpak\dbt-venv\lib\site-packages\dbt\parser\manifest.py", line 177, in parse_project
+    self.parse_with_cache(path, parser, old_results)
+  File "c:\users\jkolpak\dbt-venv\lib\site-packages\dbt\parser\manifest.py", line 133, in parse_with_cache
+    parser.parse_file(block)
+  File "c:\users\jkolpak\dbt-venv\lib\site-packages\dbt\parser\base.py", line 429, in parse_file
+    self.parse_node(file_block)
+  File "c:\users\jkolpak\dbt-venv\lib\site-packages\dbt\parser\base.py", line 402, in parse_node
+    self.render_update(node, config)
+  File "c:\users\jkolpak\dbt-venv\lib\site-packages\dbt\parser\base.py", line 377, in render_update
+    self.render_with_context(node, config)
+  File "c:\users\jkolpak\dbt-venv\lib\site-packages\dbt\parser\base.py", line 289, in render_with_context
+    parsed_node.raw_sql, context, parsed_node, capture_macros=True
+  File "c:\users\jkolpak\dbt-venv\lib\site-packages\dbt\clients\jinja.py", line 575, in get_rendered
+    native=native,
+  File "c:\users\jkolpak\dbt-venv\lib\site-packages\dbt\clients\jinja.py", line 523, in get_template
+    return env.from_string(template_source, globals=ctx)
+  File "C:\Users\jkolpak\AppData\Local\Continuum\anaconda3\lib\contextlib.py", line 130, in __exit__
+    self.gen.throw(type, value, traceback)
+  File "c:\users\jkolpak\dbt-venv\lib\site-packages\dbt\clients\jinja.py", line 499, in catch_jinja
+    raise CompilationException(str(e), node) from e
+dbt.exceptions.CompilationException: Compilation Error in model DimSupplier (models\DimSupplier.sql)
+  unexpected '}', expected ')'
+    line 1
+      {{ config(materialized='table' }}
+
+2021-02-18 01:38:31.567052 (MainThread): Running with dbt=0.18.0
+2021-02-18 01:38:32.388580 (MainThread): running dbt with arguments Namespace(cls=<class 'dbt.task.run.RunTask'>, debug=False, defer=None, exclude=None, fail_fast=False, full_refresh=False, log_cache_events=False, log_format='default', models=None, partial_parse=None, profile=None, profiles_dir='C:\\Users\\jkolpak\\.dbt', project_dir=None, record_timing_info=None, rpc_method='run', selector_name=None, single_threaded=False, state=None, strict=False, target=None, test_new_parser=False, threads=None, use_cache=True, use_colors=None, vars='{}', version_check=True, warn_error=False, which='run', write_json=True)
+2021-02-18 01:38:32.470341 (MainThread): Tracking: tracking
+2021-02-18 01:38:32.471337 (MainThread): Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002F0359520C8>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002F0399F3308>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002F0399F0788>]}
+2021-02-18 01:38:32.506634 (MainThread): Partial parsing not enabled
+2021-02-18 01:38:32.507983 (MainThread): Parsing macros\get_custom_schema.sql
+2021-02-18 01:38:32.508530 (MainThread): Parsing macros\grant_select_on_schemas.sql
+2021-02-18 01:38:32.511555 (MainThread): Parsing macros\adapters.sql
+2021-02-18 01:38:32.550344 (MainThread): Parsing macros\catalog.sql
+2021-02-18 01:38:32.553519 (MainThread): Parsing macros\materializations\incremental.sql
+2021-02-18 01:38:32.565495 (MainThread): Parsing macros\materializations\merge.sql
+2021-02-18 01:38:32.568487 (MainThread): Parsing macros\materializations\table.sql
+2021-02-18 01:38:32.573328 (MainThread): Parsing macros\materializations\view.sql
+2021-02-18 01:38:32.578316 (MainThread): Parsing macros\core.sql
+2021-02-18 01:38:32.582303 (MainThread): Parsing macros\adapters\common.sql
+2021-02-18 01:38:32.634141 (MainThread): Parsing macros\etc\datetime.sql
+2021-02-18 01:38:32.645157 (MainThread): Parsing macros\etc\get_custom_alias.sql
+2021-02-18 01:38:32.646172 (MainThread): Parsing macros\etc\get_custom_database.sql
+2021-02-18 01:38:32.648539 (MainThread): Parsing macros\etc\get_custom_schema.sql
+2021-02-18 01:38:32.651101 (MainThread): Parsing macros\etc\is_incremental.sql
+2021-02-18 01:38:32.653069 (MainThread): Parsing macros\etc\query.sql
+2021-02-18 01:38:32.654067 (MainThread): Parsing macros\materializations\helpers.sql
+2021-02-18 01:38:32.664324 (MainThread): Parsing macros\materializations\common\merge.sql
+2021-02-18 01:38:32.682434 (MainThread): Parsing macros\materializations\incremental\helpers.sql
+2021-02-18 01:38:32.684394 (MainThread): Parsing macros\materializations\incremental\incremental.sql
+2021-02-18 01:38:32.691557 (MainThread): Parsing macros\materializations\seed\seed.sql
+2021-02-18 01:38:32.713615 (MainThread): Parsing macros\materializations\snapshot\snapshot.sql
+2021-02-18 01:38:32.746898 (MainThread): Parsing macros\materializations\snapshot\snapshot_merge.sql
+2021-02-18 01:38:32.749002 (MainThread): Parsing macros\materializations\snapshot\strategies.sql
+2021-02-18 01:38:32.766331 (MainThread): Parsing macros\materializations\table\table.sql
+2021-02-18 01:38:32.774377 (MainThread): Parsing macros\materializations\view\create_or_replace_view.sql
+2021-02-18 01:38:32.779284 (MainThread): Parsing macros\materializations\view\view.sql
+2021-02-18 01:38:32.786397 (MainThread): Parsing macros\schema_tests\accepted_values.sql
+2021-02-18 01:38:32.789285 (MainThread): Parsing macros\schema_tests\not_null.sql
+2021-02-18 01:38:32.790941 (MainThread): Parsing macros\schema_tests\relationships.sql
+2021-02-18 01:38:32.792934 (MainThread): Parsing macros\schema_tests\unique.sql
+2021-02-18 01:38:32.799345 (MainThread): * Deprecation Warning: dbt v0.17.0 introduces a new config format for the
+dbt_project.yml file. Support for the existing version 1 format will be removed
+in a future release of dbt. The following packages are currently configured with
+config version 1:
+ - dbtpoc
+
+For upgrading instructions, consult the documentation:
+  https://docs.getdbt.com/docs/guides/migration-guide/upgrading-to-0-17-0
+
+2021-02-18 01:38:32.807869 (MainThread): Sending event: {'category': 'dbt', 'action': 'deprecation', 'label': 'c47d9d92-9de1-4688-a521-c7f4890d20c7', 'property_': 'warn', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002F0399FCCC8>]}
+2021-02-18 01:38:32.808387 (MainThread): Partial parsing not enabled
+2021-02-18 01:38:32.852316 (MainThread): Acquiring new snowflake connection "model.dbtpoc.DimSupplier".
+2021-02-18 01:38:33.082260 (MainThread): Found 1 model, 0 tests, 0 snapshots, 0 analyses, 145 macros, 0 operations, 0 seed files, 0 sources
+2021-02-18 01:38:33.083034 (MainThread): 
+2021-02-18 01:38:33.084031 (MainThread): Acquiring new snowflake connection "master".
+2021-02-18 01:38:33.086027 (ThreadPoolExecutor-0_0): Acquiring new snowflake connection "list_DBT_POC".
+2021-02-18 01:38:33.135713 (ThreadPoolExecutor-0_0): Using snowflake connection "list_DBT_POC".
+2021-02-18 01:38:33.136743 (ThreadPoolExecutor-0_0): On list_DBT_POC: /* {"app": "dbt", "dbt_version": "0.18.0", "profile_name": "dbtpoc", "target_name": "dev", "connection_name": "list_DBT_POC"} */
+
+    show terse schemas in database DBT_POC
+    limit 10000
+2021-02-18 01:38:33.136743 (ThreadPoolExecutor-0_0): Opening a new connection, currently in state init
+2021-02-18 01:38:34.491064 (ThreadPoolExecutor-0_0): SQL status: SUCCESS 5 in 1.35 seconds
+2021-02-18 01:38:34.501108 (ThreadPoolExecutor-0_0): On list_DBT_POC: Close
+2021-02-18 01:38:34.835575 (ThreadPoolExecutor-1_0): Acquiring new snowflake connection "list_DBT_POC_dbt_jkolpak".
+2021-02-18 01:38:34.852644 (ThreadPoolExecutor-1_0): Using snowflake connection "list_DBT_POC_dbt_jkolpak".
+2021-02-18 01:38:34.852644 (ThreadPoolExecutor-1_0): On list_DBT_POC_dbt_jkolpak: /* {"app": "dbt", "dbt_version": "0.18.0", "profile_name": "dbtpoc", "target_name": "dev", "connection_name": "list_DBT_POC_dbt_jkolpak"} */
+
+    show terse objects in DBT_POC.dbt_jkolpak
+2021-02-18 01:38:34.853595 (ThreadPoolExecutor-1_0): Opening a new connection, currently in state init
+2021-02-18 01:38:36.130026 (ThreadPoolExecutor-1_0): SQL status: SUCCESS 6 in 1.28 seconds
+2021-02-18 01:38:36.146593 (ThreadPoolExecutor-1_0): On list_DBT_POC_dbt_jkolpak: Close
+2021-02-18 01:38:36.428947 (MainThread): Using snowflake connection "master".
+2021-02-18 01:38:36.428947 (MainThread): On master: BEGIN
+2021-02-18 01:38:36.429642 (MainThread): Opening a new connection, currently in state init
+2021-02-18 01:38:37.352060 (MainThread): SQL status: SUCCESS 1 in 0.92 seconds
+2021-02-18 01:38:37.352060 (MainThread): On master: COMMIT
+2021-02-18 01:38:37.353139 (MainThread): Using snowflake connection "master".
+2021-02-18 01:38:37.353139 (MainThread): On master: COMMIT
+2021-02-18 01:38:37.759448 (MainThread): SQL status: SUCCESS 1 in 0.41 seconds
+2021-02-18 01:38:37.759448 (MainThread): On master: Close
+2021-02-18 01:38:38.077236 (MainThread): 19:38:38 | Concurrency: 16 threads (target='dev')
+2021-02-18 01:38:38.078762 (MainThread): 19:38:38 | 
+2021-02-18 01:38:38.085254 (Thread-1): Began running node model.dbtpoc.DimSupplier
+2021-02-18 01:38:38.088245 (Thread-1): 19:38:38 | 1 of 1 START table model dbt_jkolpak.DimSupplier..................... [RUN]
+2021-02-18 01:38:38.089247 (Thread-1): Acquiring new snowflake connection "model.dbtpoc.DimSupplier".
+2021-02-18 01:38:38.089247 (Thread-1): Compiling model.dbtpoc.DimSupplier
+2021-02-18 01:38:38.109475 (Thread-1): Writing injected SQL for node "model.dbtpoc.DimSupplier"
+2021-02-18 01:38:38.110469 (Thread-1): finished collecting timing info
+2021-02-18 01:38:38.144523 (Thread-1): Writing runtime SQL for node "model.dbtpoc.DimSupplier"
+2021-02-18 01:38:38.146517 (Thread-1): Using snowflake connection "model.dbtpoc.DimSupplier".
+2021-02-18 01:38:38.146517 (Thread-1): On model.dbtpoc.DimSupplier: BEGIN
+2021-02-18 01:38:38.146517 (Thread-1): Opening a new connection, currently in state init
+2021-02-18 01:38:39.045693 (Thread-1): SQL status: SUCCESS 1 in 0.90 seconds
+2021-02-18 01:38:39.045693 (Thread-1): Using snowflake connection "model.dbtpoc.DimSupplier".
+2021-02-18 01:38:39.045693 (Thread-1): On model.dbtpoc.DimSupplier: /* {"app": "dbt", "dbt_version": "0.18.0", "profile_name": "dbtpoc", "target_name": "dev", "node_id": "model.dbtpoc.DimSupplier"} */
+
+
+      create or replace transient table DBT_POC.dbt_jkolpak.DimSupplier  as
+      (
+
+SELECT S_SUPPKEY AS SUPPLIER_KEY
+    , S_NAME AS SUPPLIER_NAME
+    , S_ADDRESS AS SUPPLIER_ADDRESS
+    , S_PHONE AS SUPPLIER_PHONE_NUMBER
+    , S_ACCTBAL AS SUPPLIER_ACCOUNT_BALANCE
+    , S_COMMENT AS SUPPLIER_COMMENT
+    , N.N_NAME AS SUPPLIER_NATION
+    , R.R_NAME AS SUPPLIER_REGION
+FROM "SNOWFLAKE_SAMPLE_DATA"."TPCH_SF10"."SUPPLIER" S
+LEFT JOIN "SNOWFLAKE_SAMPLE_DATA"."TPCH_SF10"."NATION" N ON S.S_NATIONKEY = N.N_NATIONKEY
+LEFT JOIN "SNOWFLAKE_SAMPLE_DATA"."TPCH_SF10"."REGION" R ON N.N_REGIONKEY = R.R_REGIONKEY
+      );
+2021-02-18 01:38:43.410983 (Thread-1): SQL status: SUCCESS 1 in 4.37 seconds
+2021-02-18 01:38:43.414161 (Thread-1): On model.dbtpoc.DimSupplier: COMMIT
+2021-02-18 01:38:43.414161 (Thread-1): Using snowflake connection "model.dbtpoc.DimSupplier".
+2021-02-18 01:38:43.414161 (Thread-1): On model.dbtpoc.DimSupplier: COMMIT
+2021-02-18 01:38:43.579756 (Thread-1): SQL status: SUCCESS 1 in 0.17 seconds
+2021-02-18 01:38:43.612599 (Thread-1): finished collecting timing info
+2021-02-18 01:38:43.613488 (Thread-1): On model.dbtpoc.DimSupplier: Close
+2021-02-18 01:38:43.859415 (Thread-1): Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'c47d9d92-9de1-4688-a521-c7f4890d20c7', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002F039AE43C8>]}
+2021-02-18 01:38:43.861277 (Thread-1): 19:38:43 | 1 of 1 OK created table model dbt_jkolpak.DimSupplier................ [SUCCESS 1 in 5.77s]
+2021-02-18 01:38:43.862954 (Thread-1): Finished running node model.dbtpoc.DimSupplier
+2021-02-18 01:38:43.927544 (MainThread): Acquiring new snowflake connection "master".
+2021-02-18 01:38:43.928541 (MainThread): Using snowflake connection "master".
+2021-02-18 01:38:43.928541 (MainThread): On master: BEGIN
+2021-02-18 01:38:43.928541 (MainThread): Opening a new connection, currently in state closed
+2021-02-18 01:38:45.793922 (MainThread): SQL status: SUCCESS 1 in 1.87 seconds
+2021-02-18 01:38:45.794921 (MainThread): On master: COMMIT
+2021-02-18 01:38:45.794921 (MainThread): Using snowflake connection "master".
+2021-02-18 01:38:45.795916 (MainThread): On master: COMMIT
+2021-02-18 01:38:46.092397 (MainThread): SQL status: SUCCESS 1 in 0.30 seconds
+2021-02-18 01:38:46.092397 (MainThread): On master: Close
+2021-02-18 01:38:46.345093 (MainThread): 19:38:46 | 
+2021-02-18 01:38:46.364947 (MainThread): 19:38:46 | Finished running 1 table model in 13.26s.
+2021-02-18 01:38:46.367901 (MainThread): Connection 'master' was properly closed.
+2021-02-18 01:38:46.368901 (MainThread): Connection 'list_DBT_POC' was properly closed.
+2021-02-18 01:38:46.369542 (MainThread): Connection 'list_DBT_POC_dbt_jkolpak' was properly closed.
+2021-02-18 01:38:46.369706 (MainThread): Connection 'model.dbtpoc.DimSupplier' was properly closed.
+2021-02-18 01:38:46.444372 (MainThread): 
+2021-02-18 01:38:46.444719 (MainThread): Completed successfully
+2021-02-18 01:38:46.447344 (MainThread): 
+Done. PASS=1 WARN=0 ERROR=0 SKIP=0 TOTAL=1
+2021-02-18 01:38:46.448304 (MainThread): Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002F039E45348>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002F039DCD8C8>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002F039AABBC8>]}
+2021-02-18 01:38:46.449147 (MainThread): Flushing usage events
+2021-02-18 01:41:14.147332 (MainThread): Running with dbt=0.18.0
+2021-02-18 01:41:14.888445 (MainThread): running dbt with arguments Namespace(cls=<class 'dbt.task.run.RunTask'>, debug=False, defer=None, exclude=None, fail_fast=False, full_refresh=False, log_cache_events=False, log_format='default', models=None, partial_parse=None, profile=None, profiles_dir='C:\\Users\\jkolpak\\.dbt', project_dir=None, record_timing_info=None, rpc_method='run', selector_name=None, single_threaded=False, state=None, strict=False, target=None, test_new_parser=False, threads=None, use_cache=True, use_colors=None, vars='{}', version_check=True, warn_error=False, which='run', write_json=True)
+2021-02-18 01:41:14.889929 (MainThread): Tracking: tracking
+2021-02-18 01:41:14.889929 (MainThread): Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000273F7E3FF88>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000273FBED1B88>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000273FBED1A08>]}
+2021-02-18 01:41:14.909129 (MainThread): Partial parsing not enabled
+2021-02-18 01:41:14.910118 (MainThread): Parsing macros\get_custom_schema.sql
+2021-02-18 01:41:14.910118 (MainThread): Parsing macros\grant_select_on_schemas.sql
+2021-02-18 01:41:14.913110 (MainThread): Parsing macros\adapters.sql
+2021-02-18 01:41:14.943515 (MainThread): Parsing macros\catalog.sql
+2021-02-18 01:41:14.945550 (MainThread): Parsing macros\materializations\incremental.sql
+2021-02-18 01:41:14.954475 (MainThread): Parsing macros\materializations\merge.sql
+2021-02-18 01:41:14.956479 (MainThread): Parsing macros\materializations\table.sql
+2021-02-18 01:41:14.960351 (MainThread): Parsing macros\materializations\view.sql
+2021-02-18 01:41:14.964377 (MainThread): Parsing macros\core.sql
+2021-02-18 01:41:14.968549 (MainThread): Parsing macros\adapters\common.sql
+2021-02-18 01:41:15.013787 (MainThread): Parsing macros\etc\datetime.sql
+2021-02-18 01:41:15.023267 (MainThread): Parsing macros\etc\get_custom_alias.sql
+2021-02-18 01:41:15.024263 (MainThread): Parsing macros\etc\get_custom_database.sql
+2021-02-18 01:41:15.025841 (MainThread): Parsing macros\etc\get_custom_schema.sql
+2021-02-18 01:41:15.027868 (MainThread): Parsing macros\etc\is_incremental.sql
+2021-02-18 01:41:15.030176 (MainThread): Parsing macros\etc\query.sql
+2021-02-18 01:41:15.031277 (MainThread): Parsing macros\materializations\helpers.sql
+2021-02-18 01:41:15.040751 (MainThread): Parsing macros\materializations\common\merge.sql
+2021-02-18 01:41:15.058275 (MainThread): Parsing macros\materializations\incremental\helpers.sql
+2021-02-18 01:41:15.060168 (MainThread): Parsing macros\materializations\incremental\incremental.sql
+2021-02-18 01:41:15.068170 (MainThread): Parsing macros\materializations\seed\seed.sql
+2021-02-18 01:41:15.091942 (MainThread): Parsing macros\materializations\snapshot\snapshot.sql
+2021-02-18 01:41:15.123646 (MainThread): Parsing macros\materializations\snapshot\snapshot_merge.sql
+2021-02-18 01:41:15.125749 (MainThread): Parsing macros\materializations\snapshot\strategies.sql
+2021-02-18 01:41:15.143432 (MainThread): Parsing macros\materializations\table\table.sql
+2021-02-18 01:41:15.151429 (MainThread): Parsing macros\materializations\view\create_or_replace_view.sql
+2021-02-18 01:41:15.156516 (MainThread): Parsing macros\materializations\view\view.sql
+2021-02-18 01:41:15.163544 (MainThread): Parsing macros\schema_tests\accepted_values.sql
+2021-02-18 01:41:15.166536 (MainThread): Parsing macros\schema_tests\not_null.sql
+2021-02-18 01:41:15.167744 (MainThread): Parsing macros\schema_tests\relationships.sql
+2021-02-18 01:41:15.170365 (MainThread): Parsing macros\schema_tests\unique.sql
+2021-02-18 01:41:15.176305 (MainThread): * Deprecation Warning: dbt v0.17.0 introduces a new config format for the
+dbt_project.yml file. Support for the existing version 1 format will be removed
+in a future release of dbt. The following packages are currently configured with
+config version 1:
+ - dbtpoc
+
+For upgrading instructions, consult the documentation:
+  https://docs.getdbt.com/docs/guides/migration-guide/upgrading-to-0-17-0
+
+2021-02-18 01:41:15.185357 (MainThread): Sending event: {'category': 'dbt', 'action': 'deprecation', 'label': '3c846e25-7d40-4554-ac4b-93fab59e6072', 'property_': 'warn', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000273FBF11D08>]}
+2021-02-18 01:41:15.186391 (MainThread): Partial parsing not enabled
+2021-02-18 01:41:15.229613 (MainThread): Acquiring new snowflake connection "model.dbtpoc.DimSupplier".
+2021-02-18 01:41:15.247788 (MainThread): Acquiring new snowflake connection "model.dbtpoc.FactLineItem".
+2021-02-18 01:41:15.437455 (MainThread): Found 2 models, 0 tests, 0 snapshots, 0 analyses, 145 macros, 0 operations, 0 seed files, 0 sources
+2021-02-18 01:41:15.438447 (MainThread): 
+2021-02-18 01:41:15.438447 (MainThread): Acquiring new snowflake connection "master".
+2021-02-18 01:41:15.444173 (ThreadPoolExecutor-0_0): Acquiring new snowflake connection "list_DBT_POC".
+2021-02-18 01:41:15.463389 (ThreadPoolExecutor-0_0): Using snowflake connection "list_DBT_POC".
+2021-02-18 01:41:15.463389 (ThreadPoolExecutor-0_0): On list_DBT_POC: /* {"app": "dbt", "dbt_version": "0.18.0", "profile_name": "dbtpoc", "target_name": "dev", "connection_name": "list_DBT_POC"} */
+
+    show terse schemas in database DBT_POC
+    limit 10000
+2021-02-18 01:41:15.464417 (ThreadPoolExecutor-0_0): Opening a new connection, currently in state init
+2021-02-18 01:41:16.696772 (ThreadPoolExecutor-0_0): SQL status: SUCCESS 5 in 1.23 seconds
+2021-02-18 01:41:16.706368 (ThreadPoolExecutor-0_0): On list_DBT_POC: Close
+2021-02-18 01:41:17.112908 (ThreadPoolExecutor-1_0): Acquiring new snowflake connection "list_DBT_POC_dbt_jkolpak".
+2021-02-18 01:41:17.132201 (ThreadPoolExecutor-1_0): Using snowflake connection "list_DBT_POC_dbt_jkolpak".
+2021-02-18 01:41:17.132201 (ThreadPoolExecutor-1_0): On list_DBT_POC_dbt_jkolpak: /* {"app": "dbt", "dbt_version": "0.18.0", "profile_name": "dbtpoc", "target_name": "dev", "connection_name": "list_DBT_POC_dbt_jkolpak"} */
+
+    show terse objects in DBT_POC.dbt_jkolpak
+2021-02-18 01:41:17.133143 (ThreadPoolExecutor-1_0): Opening a new connection, currently in state init
+2021-02-18 01:41:18.147616 (ThreadPoolExecutor-1_0): SQL status: SUCCESS 6 in 1.01 seconds
+2021-02-18 01:41:18.155160 (ThreadPoolExecutor-1_0): On list_DBT_POC_dbt_jkolpak: Close
+2021-02-18 01:41:18.508188 (MainThread): Using snowflake connection "master".
+2021-02-18 01:41:18.508454 (MainThread): On master: BEGIN
+2021-02-18 01:41:18.508850 (MainThread): Opening a new connection, currently in state init
+2021-02-18 01:41:20.135485 (MainThread): SQL status: SUCCESS 1 in 1.63 seconds
+2021-02-18 01:41:20.136483 (MainThread): On master: COMMIT
+2021-02-18 01:41:20.136483 (MainThread): Using snowflake connection "master".
+2021-02-18 01:41:20.136483 (MainThread): On master: COMMIT
+2021-02-18 01:41:20.558256 (MainThread): SQL status: SUCCESS 1 in 0.42 seconds
+2021-02-18 01:41:20.558256 (MainThread): On master: Close
+2021-02-18 01:41:20.846027 (MainThread): 19:41:20 | Concurrency: 16 threads (target='dev')
+2021-02-18 01:41:20.871453 (MainThread): 19:41:20 | 
+2021-02-18 01:41:20.888615 (Thread-1): Began running node model.dbtpoc.DimSupplier
+2021-02-18 01:41:20.892604 (Thread-1): 19:41:20 | 1 of 2 START table model dbt_jkolpak.DimSupplier..................... [RUN]
+2021-02-18 01:41:20.946412 (Thread-1): Acquiring new snowflake connection "model.dbtpoc.DimSupplier".
+2021-02-18 01:41:20.946412 (Thread-1): Compiling model.dbtpoc.DimSupplier
+2021-02-18 01:41:20.993317 (Thread-1): Writing injected SQL for node "model.dbtpoc.DimSupplier"
+2021-02-18 01:41:20.995363 (Thread-1): finished collecting timing info
+2021-02-18 01:41:21.088231 (Thread-1): Writing runtime SQL for node "model.dbtpoc.DimSupplier"
+2021-02-18 01:41:21.092243 (Thread-1): Using snowflake connection "model.dbtpoc.DimSupplier".
+2021-02-18 01:41:21.093240 (Thread-1): On model.dbtpoc.DimSupplier: BEGIN
+2021-02-18 01:41:21.093240 (Thread-1): Opening a new connection, currently in state init
+2021-02-18 01:41:23.042622 (Thread-1): SQL status: SUCCESS 1 in 1.95 seconds
+2021-02-18 01:41:23.043788 (Thread-1): Using snowflake connection "model.dbtpoc.DimSupplier".
+2021-02-18 01:41:23.043788 (Thread-1): On model.dbtpoc.DimSupplier: /* {"app": "dbt", "dbt_version": "0.18.0", "profile_name": "dbtpoc", "target_name": "dev", "node_id": "model.dbtpoc.DimSupplier"} */
+
+
+      create or replace transient table DBT_POC.dbt_jkolpak.DimSupplier  as
+      (
+
+SELECT S_SUPPKEY AS SUPPLIER_KEY
+    , S_NAME AS SUPPLIER_NAME
+    , S_ADDRESS AS SUPPLIER_ADDRESS
+    , S_PHONE AS SUPPLIER_PHONE_NUMBER
+    , S_ACCTBAL AS SUPPLIER_ACCOUNT_BALANCE
+    , S_COMMENT AS SUPPLIER_COMMENT
+    , N.N_NAME AS SUPPLIER_NATION
+    , R.R_NAME AS SUPPLIER_REGION
+FROM "SNOWFLAKE_SAMPLE_DATA"."TPCH_SF10"."SUPPLIER" S
+LEFT JOIN "SNOWFLAKE_SAMPLE_DATA"."TPCH_SF10"."NATION" N ON S.S_NATIONKEY = N.N_NATIONKEY
+LEFT JOIN "SNOWFLAKE_SAMPLE_DATA"."TPCH_SF10"."REGION" R ON N.N_REGIONKEY = R.R_REGIONKEY
+      );
+2021-02-18 01:41:26.563054 (Thread-1): SQL status: SUCCESS 1 in 3.52 seconds
+2021-02-18 01:41:26.565049 (Thread-1): On model.dbtpoc.DimSupplier: COMMIT
+2021-02-18 01:41:26.566393 (Thread-1): Using snowflake connection "model.dbtpoc.DimSupplier".
+2021-02-18 01:41:26.566393 (Thread-1): On model.dbtpoc.DimSupplier: COMMIT
+2021-02-18 01:41:26.844581 (Thread-1): SQL status: SUCCESS 1 in 0.28 seconds
+2021-02-18 01:41:26.898329 (Thread-1): finished collecting timing info
+2021-02-18 01:41:26.899642 (Thread-1): On model.dbtpoc.DimSupplier: Close
+2021-02-18 01:41:27.240316 (Thread-1): Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '3c846e25-7d40-4554-ac4b-93fab59e6072', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000273FC289F88>]}
+2021-02-18 01:41:27.243305 (Thread-1): 19:41:27 | 1 of 2 OK created table model dbt_jkolpak.DimSupplier................ [SUCCESS 1 in 6.29s]
+2021-02-18 01:41:27.244689 (Thread-1): Finished running node model.dbtpoc.DimSupplier
+2021-02-18 01:41:27.245333 (Thread-3): Began running node model.dbtpoc.FactLineItem
+2021-02-18 01:41:27.248538 (Thread-3): 19:41:27 | 2 of 2 START incremental model dbt_jkolpak.FactLineItem.............. [RUN]
+2021-02-18 01:41:27.249102 (Thread-3): Acquiring new snowflake connection "model.dbtpoc.FactLineItem".
+2021-02-18 01:41:27.249102 (Thread-3): Compiling model.dbtpoc.FactLineItem
+2021-02-18 01:41:27.284600 (Thread-3): Writing injected SQL for node "model.dbtpoc.FactLineItem"
+2021-02-18 01:41:27.287399 (Thread-3): finished collecting timing info
+2021-02-18 01:41:27.388333 (Thread-3): Using snowflake connection "model.dbtpoc.FactLineItem".
+2021-02-18 01:41:27.389328 (Thread-3): On model.dbtpoc.FactLineItem: /* {"app": "dbt", "dbt_version": "0.18.0", "profile_name": "dbtpoc", "target_name": "dev", "node_id": "model.dbtpoc.FactLineItem"} */
+
+    
+
+      create or replace temporary table DBT_POC.dbt_jkolpak.FactLineItem__dbt_tmp  as
+      (
+
+SELECT L_ORDERKEY AS ORDER_KEY
+    , L_LINENUMBER AS LINE_NUMBER
+    , L_QUANTITY AS QUANTITY
+    , L_EXTENDEDPRICE AS EXTENDED_PRICE
+    , L_DISCOUNT AS LINE_DISCOUNT
+    , L_TAX AS LINE_TAX
+    , CASE L_RETURNFLAG
+        WHEN 'R' THEN 'Returned'
+        WHEN 'A' THEN 'Available for Return'
+        WHEN 'N' THEN 'Not Available for Return'
+      END AS LINE_RETURN_FLAG  
+    , L_SHIPDATE AS LINE_SHIP_DATE
+    , L_RECEIPTDATE AS LINE_RECEIPT_DATE
+    , L_COMMITDATE AS LINE_COMMITDATE
+    , L_RECEIPTDATE - L_SHIPDATE AS SHIP_RECEIPT_LAG
+    , L_PARTKEY AS LINE_PART_KEY
+    , L_SUPPKEY AS LINE_SUPPLIER_KEY 
+FROM "SNOWFLAKE_SAMPLE_DATA"."TPCH_SF1"."LINEITEM"
+LEFT JOIN "SNOWFLAKE_SAMPLE_DATA"."TPCH_SF10"."PART" P ON L.L_PARTKEY = P.P_PARTKEY
+LEFT JOIN DBT_POC.dbt_jkolpak.DimSupplier S ON L.L_SUPPKEY = S.SUPPLIER_NAME
+LEFT JOIN "SNOWFLAKE_SAMPLE_DATA"."TPCH_SF10"."ORDERS" O ON L.L_ORDERKEY = O.O_ORDERKEY
+LEFT JOIN "SNOWFLAKE_SAMPLE_DATA"."TPCH_SF10"."CUSTOMER" C ON O.O_CUSTKEY = C.C_CUSTKEY
+ORDER BY L.L_ORDERKEY
+
+
+
+  -- this filter will only be applied on an incremental run
+  where event_time > (select max(event_time) from DBT_POC.dbt_jkolpak.FactLineItem)
+
+
+      );
+2021-02-18 01:41:27.389328 (Thread-3): Opening a new connection, currently in state init
+2021-02-18 01:41:29.058003 (Thread-3): Snowflake query id: 019a5ce5-0553-d047-0000-4015003030c6
+2021-02-18 01:41:29.058180 (Thread-3): Snowflake error: 001003 (42000): SQL compilation error:
+syntax error line 31 at position 2 unexpected 'where'.
+2021-02-18 01:41:29.058699 (Thread-3): finished collecting timing info
+2021-02-18 01:41:29.059222 (Thread-3): On model.dbtpoc.FactLineItem: Close
+2021-02-18 01:41:29.290187 (Thread-3): Database Error in model FactLineItem (models\FactLineItem.sql)
+  001003 (42000): SQL compilation error:
+  syntax error line 31 at position 2 unexpected 'where'.
+  compiled SQL at target\compiled\dbtpoc\models\FactLineItem.sql
+Traceback (most recent call last):
+  File "c:\users\jkolpak\dbt-venv\lib\site-packages\dbt\adapters\snowflake\connections.py", line 161, in exception_handler
+    yield
+  File "c:\users\jkolpak\dbt-venv\lib\site-packages\dbt\adapters\sql\connections.py", line 78, in add_query
+    cursor.execute(sql, bindings)
+  File "c:\users\jkolpak\dbt-venv\lib\site-packages\snowflake\connector\cursor.py", line 596, in execute
+    errvalue)
+  File "c:\users\jkolpak\dbt-venv\lib\site-packages\snowflake\connector\errors.py", line 123, in errorhandler_wrapper
+    cursor.errorhandler(connection, cursor, error_class, error_value)
+  File "c:\users\jkolpak\dbt-venv\lib\site-packages\snowflake\connector\errors.py", line 88, in default_errorhandler
+    done_format_msg=error_value.get('done_format_msg'))
+snowflake.connector.errors.ProgrammingError: 001003 (42000): SQL compilation error:
+syntax error line 31 at position 2 unexpected 'where'.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "c:\users\jkolpak\dbt-venv\lib\site-packages\dbt\task\base.py", line 333, in safe_run
+    result = self.compile_and_execute(manifest, ctx)
+  File "c:\users\jkolpak\dbt-venv\lib\site-packages\dbt\task\base.py", line 276, in compile_and_execute
+    result = self.run(ctx.node, manifest)
+  File "c:\users\jkolpak\dbt-venv\lib\site-packages\dbt\task\base.py", line 378, in run
+    return self.execute(compiled_node, manifest)
+  File "c:\users\jkolpak\dbt-venv\lib\site-packages\dbt\task\run.py", line 233, in execute
+    result = MacroGenerator(materialization_macro, context)()
+  File "c:\users\jkolpak\dbt-venv\lib\site-packages\dbt\clients\jinja.py", line 327, in __call__
+    return self.call_macro(*args, **kwargs)
+  File "c:\users\jkolpak\dbt-venv\lib\site-packages\dbt\clients\jinja.py", line 257, in call_macro
+    return macro(*args, **kwargs)
+  File "c:\users\jkolpak\dbt-venv\lib\site-packages\jinja2\runtime.py", line 675, in __call__
+    return self._invoke(arguments, autoescape)
+  File "c:\users\jkolpak\dbt-venv\lib\site-packages\jinja2\runtime.py", line 679, in _invoke
+    rv = self._func(*arguments)
+  File "<template>", line 96, in macro
+  File "c:\users\jkolpak\dbt-venv\lib\site-packages\jinja2\sandbox.py", line 462, in call
+    return __context.call(__obj, *args, **kwargs)
+  File "c:\users\jkolpak\dbt-venv\lib\site-packages\jinja2\runtime.py", line 290, in call
+    return __obj(*args, **kwargs)
+  File "c:\users\jkolpak\dbt-venv\lib\site-packages\dbt\clients\jinja.py", line 327, in __call__
+    return self.call_macro(*args, **kwargs)
+  File "c:\users\jkolpak\dbt-venv\lib\site-packages\dbt\clients\jinja.py", line 257, in call_macro
+    return macro(*args, **kwargs)
+  File "c:\users\jkolpak\dbt-venv\lib\site-packages\jinja2\runtime.py", line 675, in __call__
+    return self._invoke(arguments, autoescape)
+  File "c:\users\jkolpak\dbt-venv\lib\site-packages\jinja2\runtime.py", line 679, in _invoke
+    rv = self._func(*arguments)
+  File "<template>", line 33, in macro
+  File "c:\users\jkolpak\dbt-venv\lib\site-packages\jinja2\sandbox.py", line 462, in call
+    return __context.call(__obj, *args, **kwargs)
+  File "c:\users\jkolpak\dbt-venv\lib\site-packages\jinja2\runtime.py", line 290, in call
+    return __obj(*args, **kwargs)
+  File "c:\users\jkolpak\dbt-venv\lib\site-packages\dbt\clients\jinja.py", line 327, in __call__
+    return self.call_macro(*args, **kwargs)
+  File "c:\users\jkolpak\dbt-venv\lib\site-packages\dbt\clients\jinja.py", line 257, in call_macro
+    return macro(*args, **kwargs)
+  File "c:\users\jkolpak\dbt-venv\lib\site-packages\jinja2\runtime.py", line 675, in __call__
+    return self._invoke(arguments, autoescape)
+  File "c:\users\jkolpak\dbt-venv\lib\site-packages\jinja2\runtime.py", line 679, in _invoke
+    rv = self._func(*arguments)
+  File "<template>", line 41, in macro
+  File "c:\users\jkolpak\dbt-venv\lib\site-packages\jinja2\sandbox.py", line 462, in call
+    return __context.call(__obj, *args, **kwargs)
+  File "c:\users\jkolpak\dbt-venv\lib\site-packages\jinja2\runtime.py", line 290, in call
+    return __obj(*args, **kwargs)
+  File "c:\users\jkolpak\dbt-venv\lib\site-packages\dbt\adapters\base\impl.py", line 227, in execute
+    fetch=fetch
+  File "c:\users\jkolpak\dbt-venv\lib\site-packages\dbt\adapters\sql\connections.py", line 123, in execute
+    _, cursor = self.add_query(sql, auto_begin)
+  File "c:\users\jkolpak\dbt-venv\lib\site-packages\dbt\adapters\snowflake\connections.py", line 312, in add_query
+    abridge_sql_log=abridge_sql_log
+  File "c:\users\jkolpak\dbt-venv\lib\site-packages\dbt\adapters\sql\connections.py", line 86, in add_query
+    return connection, cursor
+  File "C:\Users\jkolpak\AppData\Local\Continuum\anaconda3\lib\contextlib.py", line 130, in __exit__
+    self.gen.throw(type, value, traceback)
+  File "c:\users\jkolpak\dbt-venv\lib\site-packages\dbt\adapters\snowflake\connections.py", line 178, in exception_handler
+    raise DatabaseException(msg)
+dbt.exceptions.DatabaseException: Database Error in model FactLineItem (models\FactLineItem.sql)
+  001003 (42000): SQL compilation error:
+  syntax error line 31 at position 2 unexpected 'where'.
+  compiled SQL at target\compiled\dbtpoc\models\FactLineItem.sql
+2021-02-18 01:41:29.371493 (Thread-3): Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '3c846e25-7d40-4554-ac4b-93fab59e6072', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000273FC1017C8>]}
+2021-02-18 01:41:29.375682 (Thread-3): 19:41:29 | 2 of 2 ERROR creating incremental model dbt_jkolpak.FactLineItem..... [ERROR in 2.12s]
+2021-02-18 01:41:29.377476 (Thread-3): Finished running node model.dbtpoc.FactLineItem
+2021-02-18 01:41:29.473325 (MainThread): Acquiring new snowflake connection "master".
+2021-02-18 01:41:29.474439 (MainThread): Using snowflake connection "master".
+2021-02-18 01:41:29.474439 (MainThread): On master: BEGIN
+2021-02-18 01:41:29.474439 (MainThread): Opening a new connection, currently in state closed
+2021-02-18 01:41:30.798682 (MainThread): SQL status: SUCCESS 1 in 1.32 seconds
+2021-02-18 01:41:30.799475 (MainThread): On master: COMMIT
+2021-02-18 01:41:30.799475 (MainThread): Using snowflake connection "master".
+2021-02-18 01:41:30.800380 (MainThread): On master: COMMIT
+2021-02-18 01:41:31.880471 (MainThread): SQL status: SUCCESS 1 in 1.08 seconds
+2021-02-18 01:41:31.880471 (MainThread): On master: Close
+2021-02-18 01:41:32.414226 (MainThread): 19:41:32 | 
+2021-02-18 01:41:32.415511 (MainThread): 19:41:32 | Finished running 1 table model, 1 incremental model in 16.98s.
+2021-02-18 01:41:32.415511 (MainThread): Connection 'master' was properly closed.
+2021-02-18 01:41:32.416221 (MainThread): Connection 'list_DBT_POC' was properly closed.
+2021-02-18 01:41:32.416327 (MainThread): Connection 'list_DBT_POC_dbt_jkolpak' was properly closed.
+2021-02-18 01:41:32.416327 (MainThread): Connection 'model.dbtpoc.DimSupplier' was properly closed.
+2021-02-18 01:41:32.416523 (MainThread): Connection 'model.dbtpoc.FactLineItem' was properly closed.
+2021-02-18 01:41:32.428547 (MainThread): 
+2021-02-18 01:41:32.430107 (MainThread): Completed with 1 error and 0 warnings:
+2021-02-18 01:41:32.431058 (MainThread): 
+2021-02-18 01:41:32.432058 (MainThread): Database Error in model FactLineItem (models\FactLineItem.sql)
+2021-02-18 01:41:32.434051 (MainThread):   001003 (42000): SQL compilation error:
+2021-02-18 01:41:32.435047 (MainThread):   syntax error line 31 at position 2 unexpected 'where'.
+2021-02-18 01:41:32.435047 (MainThread):   compiled SQL at target\compiled\dbtpoc\models\FactLineItem.sql
+2021-02-18 01:41:32.436045 (MainThread): 
+Done. PASS=1 WARN=0 ERROR=1 SKIP=0 TOTAL=2
+2021-02-18 01:41:32.437043 (MainThread): Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000273FC0B0A88>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000273FBEEE588>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000273FC2D4348>]}
+2021-02-18 01:41:32.437043 (MainThread): Flushing usage events
+2021-02-18 01:42:22.574400 (MainThread): Running with dbt=0.18.0
+2021-02-18 01:42:23.487453 (MainThread): running dbt with arguments Namespace(cls=<class 'dbt.task.run.RunTask'>, debug=False, defer=None, exclude=None, fail_fast=False, full_refresh=False, log_cache_events=False, log_format='default', models=None, partial_parse=None, profile=None, profiles_dir='C:\\Users\\jkolpak\\.dbt', project_dir=None, record_timing_info=None, rpc_method='run', selector_name=None, single_threaded=False, state=None, strict=False, target=None, test_new_parser=False, threads=None, use_cache=True, use_colors=None, vars='{}', version_check=True, warn_error=False, which='run', write_json=True)
+2021-02-18 01:42:23.489005 (MainThread): Tracking: tracking
+2021-02-18 01:42:23.489005 (MainThread): Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001DAD852FE88>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001DADC5BF8C8>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001DADC5BFD48>]}
+2021-02-18 01:42:23.510020 (MainThread): Partial parsing not enabled
+2021-02-18 01:42:23.511018 (MainThread): Parsing macros\get_custom_schema.sql
+2021-02-18 01:42:23.512163 (MainThread): Parsing macros\grant_select_on_schemas.sql
+2021-02-18 01:42:23.514010 (MainThread): Parsing macros\adapters.sql
+2021-02-18 01:42:23.549310 (MainThread): Parsing macros\catalog.sql
+2021-02-18 01:42:23.551159 (MainThread): Parsing macros\materializations\incremental.sql
+2021-02-18 01:42:23.564024 (MainThread): Parsing macros\materializations\merge.sql
+2021-02-18 01:42:23.567098 (MainThread): Parsing macros\materializations\table.sql
+2021-02-18 01:42:23.572338 (MainThread): Parsing macros\materializations\view.sql
+2021-02-18 01:42:23.576328 (MainThread): Parsing macros\core.sql
+2021-02-18 01:42:23.581761 (MainThread): Parsing macros\adapters\common.sql
+2021-02-18 01:42:23.634323 (MainThread): Parsing macros\etc\datetime.sql
+2021-02-18 01:42:23.646773 (MainThread): Parsing macros\etc\get_custom_alias.sql
+2021-02-18 01:42:23.648092 (MainThread): Parsing macros\etc\get_custom_database.sql
+2021-02-18 01:42:23.650642 (MainThread): Parsing macros\etc\get_custom_schema.sql
+2021-02-18 01:42:23.660874 (MainThread): Parsing macros\etc\is_incremental.sql
+2021-02-18 01:42:23.663365 (MainThread): Parsing macros\etc\query.sql
+2021-02-18 01:42:23.664404 (MainThread): Parsing macros\materializations\helpers.sql
+2021-02-18 01:42:23.674039 (MainThread): Parsing macros\materializations\common\merge.sql
+2021-02-18 01:42:23.689368 (MainThread): Parsing macros\materializations\incremental\helpers.sql
+2021-02-18 01:42:23.691363 (MainThread): Parsing macros\materializations\incremental\incremental.sql
+2021-02-18 01:42:23.698615 (MainThread): Parsing macros\materializations\seed\seed.sql
+2021-02-18 01:42:23.721527 (MainThread): Parsing macros\materializations\snapshot\snapshot.sql
+2021-02-18 01:42:23.753535 (MainThread): Parsing macros\materializations\snapshot\snapshot_merge.sql
+2021-02-18 01:42:23.755539 (MainThread): Parsing macros\materializations\snapshot\strategies.sql
+2021-02-18 01:42:23.773984 (MainThread): Parsing macros\materializations\table\table.sql
+2021-02-18 01:42:23.781136 (MainThread): Parsing macros\materializations\view\create_or_replace_view.sql
+2021-02-18 01:42:23.786598 (MainThread): Parsing macros\materializations\view\view.sql
+2021-02-18 01:42:23.795059 (MainThread): Parsing macros\schema_tests\accepted_values.sql
+2021-02-18 01:42:23.800081 (MainThread): Parsing macros\schema_tests\not_null.sql
+2021-02-18 01:42:23.803073 (MainThread): Parsing macros\schema_tests\relationships.sql
+2021-02-18 01:42:23.804916 (MainThread): Parsing macros\schema_tests\unique.sql
+2021-02-18 01:42:23.812760 (MainThread): * Deprecation Warning: dbt v0.17.0 introduces a new config format for the
+dbt_project.yml file. Support for the existing version 1 format will be removed
+in a future release of dbt. The following packages are currently configured with
+config version 1:
+ - dbtpoc
+
+For upgrading instructions, consult the documentation:
+  https://docs.getdbt.com/docs/guides/migration-guide/upgrading-to-0-17-0
+
+2021-02-18 01:42:23.821073 (MainThread): Sending event: {'category': 'dbt', 'action': 'deprecation', 'label': '6b8fc81a-afc5-42ec-a97d-0c9bb7f17a1b', 'property_': 'warn', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001DADC515748>]}
+2021-02-18 01:42:23.822072 (MainThread): Partial parsing not enabled
+2021-02-18 01:42:23.891100 (MainThread): Acquiring new snowflake connection "model.dbtpoc.DimSupplier".
+2021-02-18 01:42:23.979426 (MainThread): Acquiring new snowflake connection "model.dbtpoc.FactLineItem".
+2021-02-18 01:42:24.193434 (MainThread): Found 2 models, 0 tests, 0 snapshots, 0 analyses, 145 macros, 0 operations, 0 seed files, 0 sources
+2021-02-18 01:42:24.194217 (MainThread): 
+2021-02-18 01:42:24.195204 (MainThread): Acquiring new snowflake connection "master".
+2021-02-18 01:42:24.199357 (ThreadPoolExecutor-0_0): Acquiring new snowflake connection "list_DBT_POC".
+2021-02-18 01:42:24.220345 (ThreadPoolExecutor-0_0): Using snowflake connection "list_DBT_POC".
+2021-02-18 01:42:24.220345 (ThreadPoolExecutor-0_0): On list_DBT_POC: /* {"app": "dbt", "dbt_version": "0.18.0", "profile_name": "dbtpoc", "target_name": "dev", "connection_name": "list_DBT_POC"} */
+
+    show terse schemas in database DBT_POC
+    limit 10000
+2021-02-18 01:42:24.220345 (ThreadPoolExecutor-0_0): Opening a new connection, currently in state init
+2021-02-18 01:42:25.451720 (ThreadPoolExecutor-0_0): SQL status: SUCCESS 5 in 1.23 seconds
+2021-02-18 01:42:25.460696 (ThreadPoolExecutor-0_0): On list_DBT_POC: Close
+2021-02-18 01:42:25.775600 (ThreadPoolExecutor-1_0): Acquiring new snowflake connection "list_DBT_POC_dbt_jkolpak".
+2021-02-18 01:42:25.794591 (ThreadPoolExecutor-1_0): Using snowflake connection "list_DBT_POC_dbt_jkolpak".
+2021-02-18 01:42:25.794591 (ThreadPoolExecutor-1_0): On list_DBT_POC_dbt_jkolpak: /* {"app": "dbt", "dbt_version": "0.18.0", "profile_name": "dbtpoc", "target_name": "dev", "connection_name": "list_DBT_POC_dbt_jkolpak"} */
+
+    show terse objects in DBT_POC.dbt_jkolpak
+2021-02-18 01:42:25.795587 (ThreadPoolExecutor-1_0): Opening a new connection, currently in state init
+2021-02-18 01:42:26.896058 (ThreadPoolExecutor-1_0): SQL status: SUCCESS 6 in 1.10 seconds
+2021-02-18 01:42:26.909370 (ThreadPoolExecutor-1_0): On list_DBT_POC_dbt_jkolpak: Close
+2021-02-18 01:42:27.125983 (MainThread): Using snowflake connection "master".
+2021-02-18 01:42:27.125983 (MainThread): On master: BEGIN
+2021-02-18 01:42:27.125983 (MainThread): Opening a new connection, currently in state init
+2021-02-18 01:42:28.074499 (MainThread): SQL status: SUCCESS 1 in 0.95 seconds
+2021-02-18 01:42:28.074499 (MainThread): On master: COMMIT
+2021-02-18 01:42:28.075237 (MainThread): Using snowflake connection "master".
+2021-02-18 01:42:28.075500 (MainThread): On master: COMMIT
+2021-02-18 01:42:28.479831 (MainThread): SQL status: SUCCESS 1 in 0.40 seconds
+2021-02-18 01:42:28.479831 (MainThread): On master: Close
+2021-02-18 01:42:28.777381 (MainThread): 19:42:28 | Concurrency: 16 threads (target='dev')
+2021-02-18 01:42:28.778377 (MainThread): 19:42:28 | 
+2021-02-18 01:42:28.786401 (Thread-1): Began running node model.dbtpoc.DimSupplier
+2021-02-18 01:42:28.789409 (Thread-1): 19:42:28 | 1 of 2 START table model dbt_jkolpak.DimSupplier..................... [RUN]
+2021-02-18 01:42:28.790804 (Thread-1): Acquiring new snowflake connection "model.dbtpoc.DimSupplier".
+2021-02-18 01:42:28.791429 (Thread-1): Compiling model.dbtpoc.DimSupplier
+2021-02-18 01:42:28.812408 (Thread-1): Writing injected SQL for node "model.dbtpoc.DimSupplier"
+2021-02-18 01:42:28.814369 (Thread-1): finished collecting timing info
+2021-02-18 01:42:28.847736 (Thread-1): Writing runtime SQL for node "model.dbtpoc.DimSupplier"
+2021-02-18 01:42:28.849466 (Thread-1): Using snowflake connection "model.dbtpoc.DimSupplier".
+2021-02-18 01:42:28.849466 (Thread-1): On model.dbtpoc.DimSupplier: BEGIN
+2021-02-18 01:42:28.849466 (Thread-1): Opening a new connection, currently in state init
+2021-02-18 01:42:29.747387 (Thread-1): SQL status: SUCCESS 1 in 0.90 seconds
+2021-02-18 01:42:29.747387 (Thread-1): Using snowflake connection "model.dbtpoc.DimSupplier".
+2021-02-18 01:42:29.747387 (Thread-1): On model.dbtpoc.DimSupplier: /* {"app": "dbt", "dbt_version": "0.18.0", "profile_name": "dbtpoc", "target_name": "dev", "node_id": "model.dbtpoc.DimSupplier"} */
+
+
+      create or replace transient table DBT_POC.dbt_jkolpak.DimSupplier  as
+      (
+
+SELECT S_SUPPKEY AS SUPPLIER_KEY
+    , S_NAME AS SUPPLIER_NAME
+    , S_ADDRESS AS SUPPLIER_ADDRESS
+    , S_PHONE AS SUPPLIER_PHONE_NUMBER
+    , S_ACCTBAL AS SUPPLIER_ACCOUNT_BALANCE
+    , S_COMMENT AS SUPPLIER_COMMENT
+    , N.N_NAME AS SUPPLIER_NATION
+    , R.R_NAME AS SUPPLIER_REGION
+FROM "SNOWFLAKE_SAMPLE_DATA"."TPCH_SF10"."SUPPLIER" S
+LEFT JOIN "SNOWFLAKE_SAMPLE_DATA"."TPCH_SF10"."NATION" N ON S.S_NATIONKEY = N.N_NATIONKEY
+LEFT JOIN "SNOWFLAKE_SAMPLE_DATA"."TPCH_SF10"."REGION" R ON N.N_REGIONKEY = R.R_REGIONKEY
+      );
+2021-02-18 01:42:32.366175 (Thread-1): SQL status: SUCCESS 1 in 2.62 seconds
+2021-02-18 01:42:32.368470 (Thread-1): On model.dbtpoc.DimSupplier: COMMIT
+2021-02-18 01:42:32.369694 (Thread-1): Using snowflake connection "model.dbtpoc.DimSupplier".
+2021-02-18 01:42:32.369694 (Thread-1): On model.dbtpoc.DimSupplier: COMMIT
+2021-02-18 01:42:32.553099 (Thread-1): SQL status: SUCCESS 1 in 0.18 seconds
+2021-02-18 01:42:32.569928 (Thread-1): finished collecting timing info
+2021-02-18 01:42:32.569928 (Thread-1): On model.dbtpoc.DimSupplier: Close
+2021-02-18 01:42:32.859123 (Thread-1): Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '6b8fc81a-afc5-42ec-a97d-0c9bb7f17a1b', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001DADC8050C8>]}
+2021-02-18 01:42:32.864067 (Thread-1): 19:42:32 | 1 of 2 OK created table model dbt_jkolpak.DimSupplier................ [SUCCESS 1 in 4.07s]
+2021-02-18 01:42:32.865751 (Thread-1): Finished running node model.dbtpoc.DimSupplier
+2021-02-18 01:42:32.866546 (Thread-3): Began running node model.dbtpoc.FactLineItem
+2021-02-18 01:42:32.869671 (Thread-3): 19:42:32 | 2 of 2 START incremental model dbt_jkolpak.FactLineItem.............. [RUN]
+2021-02-18 01:42:32.871733 (Thread-3): Acquiring new snowflake connection "model.dbtpoc.FactLineItem".
+2021-02-18 01:42:32.872732 (Thread-3): Compiling model.dbtpoc.FactLineItem
+2021-02-18 01:42:32.896527 (Thread-3): Writing injected SQL for node "model.dbtpoc.FactLineItem"
+2021-02-18 01:42:32.898693 (Thread-3): finished collecting timing info
+2021-02-18 01:42:32.938357 (Thread-3): Using snowflake connection "model.dbtpoc.FactLineItem".
+2021-02-18 01:42:32.938357 (Thread-3): On model.dbtpoc.FactLineItem: /* {"app": "dbt", "dbt_version": "0.18.0", "profile_name": "dbtpoc", "target_name": "dev", "node_id": "model.dbtpoc.FactLineItem"} */
+
+    
+
+      create or replace temporary table DBT_POC.dbt_jkolpak.FactLineItem__dbt_tmp  as
+      (
+
+SELECT L_ORDERKEY AS ORDER_KEY
+    , L_LINENUMBER AS LINE_NUMBER
+    , L_QUANTITY AS QUANTITY
+    , L_EXTENDEDPRICE AS EXTENDED_PRICE
+    , L_DISCOUNT AS LINE_DISCOUNT
+    , L_TAX AS LINE_TAX
+    , CASE L_RETURNFLAG
+        WHEN 'R' THEN 'Returned'
+        WHEN 'A' THEN 'Available for Return'
+        WHEN 'N' THEN 'Not Available for Return'
+      END AS LINE_RETURN_FLAG  
+    , L_SHIPDATE AS LINE_SHIP_DATE
+    , L_RECEIPTDATE AS LINE_RECEIPT_DATE
+    , L_COMMITDATE AS LINE_COMMITDATE
+    , L_RECEIPTDATE - L_SHIPDATE AS SHIP_RECEIPT_LAG
+    , L_PARTKEY AS LINE_PART_KEY
+    , L_SUPPKEY AS LINE_SUPPLIER_KEY 
+FROM "SNOWFLAKE_SAMPLE_DATA"."TPCH_SF1"."LINEITEM"
+LEFT JOIN "SNOWFLAKE_SAMPLE_DATA"."TPCH_SF10"."PART" P ON L.L_PARTKEY = P.P_PARTKEY
+LEFT JOIN DBT_POC.dbt_jkolpak.DimSupplier S ON L.L_SUPPKEY = S.SUPPLIER_NAME
+LEFT JOIN "SNOWFLAKE_SAMPLE_DATA"."TPCH_SF10"."ORDERS" O ON L.L_ORDERKEY = O.O_ORDERKEY
+LEFT JOIN "SNOWFLAKE_SAMPLE_DATA"."TPCH_SF10"."CUSTOMER" C ON O.O_CUSTKEY = C.C_CUSTKEY
+
+
+
+  -- this filter will only be applied on an incremental run
+WHERE L_RECEIPTDATE > (select max(L_RECEIPTDATE ) from DBT_POC.dbt_jkolpak.FactLineItem)
+
+
+      );
+2021-02-18 01:42:32.938357 (Thread-3): Opening a new connection, currently in state init
+2021-02-18 01:42:34.105372 (Thread-3): Snowflake query id: 019a5ce6-0548-a960-0000-4015003030de
+2021-02-18 01:42:34.105691 (Thread-3): Snowflake error: 000904 (42000): SQL compilation error: error line 22 at position 58
+invalid identifier 'L.L_PARTKEY'
+2021-02-18 01:42:34.105691 (Thread-3): finished collecting timing info
+2021-02-18 01:42:34.106478 (Thread-3): On model.dbtpoc.FactLineItem: Close
+2021-02-18 01:42:34.313119 (Thread-3): Database Error in model FactLineItem (models\FactLineItem.sql)
+  000904 (42000): SQL compilation error: error line 22 at position 58
+  invalid identifier 'L.L_PARTKEY'
+  compiled SQL at target\compiled\dbtpoc\models\FactLineItem.sql
+Traceback (most recent call last):
+  File "c:\users\jkolpak\dbt-venv\lib\site-packages\dbt\adapters\snowflake\connections.py", line 161, in exception_handler
+    yield
+  File "c:\users\jkolpak\dbt-venv\lib\site-packages\dbt\adapters\sql\connections.py", line 78, in add_query
+    cursor.execute(sql, bindings)
+  File "c:\users\jkolpak\dbt-venv\lib\site-packages\snowflake\connector\cursor.py", line 596, in execute
+    errvalue)
+  File "c:\users\jkolpak\dbt-venv\lib\site-packages\snowflake\connector\errors.py", line 123, in errorhandler_wrapper
+    cursor.errorhandler(connection, cursor, error_class, error_value)
+  File "c:\users\jkolpak\dbt-venv\lib\site-packages\snowflake\connector\errors.py", line 88, in default_errorhandler
+    done_format_msg=error_value.get('done_format_msg'))
+snowflake.connector.errors.ProgrammingError: 000904 (42000): SQL compilation error: error line 22 at position 58
+invalid identifier 'L.L_PARTKEY'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "c:\users\jkolpak\dbt-venv\lib\site-packages\dbt\task\base.py", line 333, in safe_run
+    result = self.compile_and_execute(manifest, ctx)
+  File "c:\users\jkolpak\dbt-venv\lib\site-packages\dbt\task\base.py", line 276, in compile_and_execute
+    result = self.run(ctx.node, manifest)
+  File "c:\users\jkolpak\dbt-venv\lib\site-packages\dbt\task\base.py", line 378, in run
+    return self.execute(compiled_node, manifest)
+  File "c:\users\jkolpak\dbt-venv\lib\site-packages\dbt\task\run.py", line 233, in execute
+    result = MacroGenerator(materialization_macro, context)()
+  File "c:\users\jkolpak\dbt-venv\lib\site-packages\dbt\clients\jinja.py", line 327, in __call__
+    return self.call_macro(*args, **kwargs)
+  File "c:\users\jkolpak\dbt-venv\lib\site-packages\dbt\clients\jinja.py", line 257, in call_macro
+    return macro(*args, **kwargs)
+  File "c:\users\jkolpak\dbt-venv\lib\site-packages\jinja2\runtime.py", line 675, in __call__
+    return self._invoke(arguments, autoescape)
+  File "c:\users\jkolpak\dbt-venv\lib\site-packages\jinja2\runtime.py", line 679, in _invoke
+    rv = self._func(*arguments)
+  File "<template>", line 96, in macro
+  File "c:\users\jkolpak\dbt-venv\lib\site-packages\jinja2\sandbox.py", line 462, in call
+    return __context.call(__obj, *args, **kwargs)
+  File "c:\users\jkolpak\dbt-venv\lib\site-packages\jinja2\runtime.py", line 290, in call
+    return __obj(*args, **kwargs)
+  File "c:\users\jkolpak\dbt-venv\lib\site-packages\dbt\clients\jinja.py", line 327, in __call__
+    return self.call_macro(*args, **kwargs)
+  File "c:\users\jkolpak\dbt-venv\lib\site-packages\dbt\clients\jinja.py", line 257, in call_macro
+    return macro(*args, **kwargs)
+  File "c:\users\jkolpak\dbt-venv\lib\site-packages\jinja2\runtime.py", line 675, in __call__
+    return self._invoke(arguments, autoescape)
+  File "c:\users\jkolpak\dbt-venv\lib\site-packages\jinja2\runtime.py", line 679, in _invoke
+    rv = self._func(*arguments)
+  File "<template>", line 33, in macro
+  File "c:\users\jkolpak\dbt-venv\lib\site-packages\jinja2\sandbox.py", line 462, in call
+    return __context.call(__obj, *args, **kwargs)
+  File "c:\users\jkolpak\dbt-venv\lib\site-packages\jinja2\runtime.py", line 290, in call
+    return __obj(*args, **kwargs)
+  File "c:\users\jkolpak\dbt-venv\lib\site-packages\dbt\clients\jinja.py", line 327, in __call__
+    return self.call_macro(*args, **kwargs)
+  File "c:\users\jkolpak\dbt-venv\lib\site-packages\dbt\clients\jinja.py", line 257, in call_macro
+    return macro(*args, **kwargs)
+  File "c:\users\jkolpak\dbt-venv\lib\site-packages\jinja2\runtime.py", line 675, in __call__
+    return self._invoke(arguments, autoescape)
+  File "c:\users\jkolpak\dbt-venv\lib\site-packages\jinja2\runtime.py", line 679, in _invoke
+    rv = self._func(*arguments)
+  File "<template>", line 41, in macro
+  File "c:\users\jkolpak\dbt-venv\lib\site-packages\jinja2\sandbox.py", line 462, in call
+    return __context.call(__obj, *args, **kwargs)
+  File "c:\users\jkolpak\dbt-venv\lib\site-packages\jinja2\runtime.py", line 290, in call
+    return __obj(*args, **kwargs)
+  File "c:\users\jkolpak\dbt-venv\lib\site-packages\dbt\adapters\base\impl.py", line 227, in execute
+    fetch=fetch
+  File "c:\users\jkolpak\dbt-venv\lib\site-packages\dbt\adapters\sql\connections.py", line 123, in execute
+    _, cursor = self.add_query(sql, auto_begin)
+  File "c:\users\jkolpak\dbt-venv\lib\site-packages\dbt\adapters\snowflake\connections.py", line 312, in add_query
+    abridge_sql_log=abridge_sql_log
+  File "c:\users\jkolpak\dbt-venv\lib\site-packages\dbt\adapters\sql\connections.py", line 86, in add_query
+    return connection, cursor
+  File "C:\Users\jkolpak\AppData\Local\Continuum\anaconda3\lib\contextlib.py", line 130, in __exit__
+    self.gen.throw(type, value, traceback)
+  File "c:\users\jkolpak\dbt-venv\lib\site-packages\dbt\adapters\snowflake\connections.py", line 178, in exception_handler
+    raise DatabaseException(msg)
+dbt.exceptions.DatabaseException: Database Error in model FactLineItem (models\FactLineItem.sql)
+  000904 (42000): SQL compilation error: error line 22 at position 58
+  invalid identifier 'L.L_PARTKEY'
+  compiled SQL at target\compiled\dbtpoc\models\FactLineItem.sql
+2021-02-18 01:42:34.322081 (Thread-3): Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '6b8fc81a-afc5-42ec-a97d-0c9bb7f17a1b', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001DADC8104C8>]}
+2021-02-18 01:42:34.324129 (Thread-3): 19:42:34 | 2 of 2 ERROR creating incremental model dbt_jkolpak.FactLineItem..... [ERROR in 1.45s]
+2021-02-18 01:42:34.327026 (Thread-3): Finished running node model.dbtpoc.FactLineItem
+2021-02-18 01:42:34.352357 (MainThread): Acquiring new snowflake connection "master".
+2021-02-18 01:42:34.352357 (MainThread): Using snowflake connection "master".
+2021-02-18 01:42:34.352357 (MainThread): On master: BEGIN
+2021-02-18 01:42:34.352357 (MainThread): Opening a new connection, currently in state closed
+2021-02-18 01:42:35.198134 (MainThread): SQL status: SUCCESS 1 in 0.85 seconds
+2021-02-18 01:42:35.198134 (MainThread): On master: COMMIT
+2021-02-18 01:42:35.198134 (MainThread): Using snowflake connection "master".
+2021-02-18 01:42:35.199132 (MainThread): On master: COMMIT
+2021-02-18 01:42:35.539529 (MainThread): SQL status: SUCCESS 1 in 0.34 seconds
+2021-02-18 01:42:35.540253 (MainThread): On master: Close
+2021-02-18 01:42:35.848493 (MainThread): 19:42:35 | 
+2021-02-18 01:42:35.849440 (MainThread): 19:42:35 | Finished running 1 table model, 1 incremental model in 11.65s.
+2021-02-18 01:42:35.850364 (MainThread): Connection 'master' was properly closed.
+2021-02-18 01:42:35.850364 (MainThread): Connection 'list_DBT_POC' was properly closed.
+2021-02-18 01:42:35.850364 (MainThread): Connection 'list_DBT_POC_dbt_jkolpak' was properly closed.
+2021-02-18 01:42:35.850364 (MainThread): Connection 'model.dbtpoc.DimSupplier' was properly closed.
+2021-02-18 01:42:35.850364 (MainThread): Connection 'model.dbtpoc.FactLineItem' was properly closed.
+2021-02-18 01:42:35.863058 (MainThread): 
+2021-02-18 01:42:35.863970 (MainThread): Completed with 1 error and 0 warnings:
+2021-02-18 01:42:35.865067 (MainThread): 
+2021-02-18 01:42:35.866051 (MainThread): Database Error in model FactLineItem (models\FactLineItem.sql)
+2021-02-18 01:42:35.867218 (MainThread):   000904 (42000): SQL compilation error: error line 22 at position 58
+2021-02-18 01:42:35.867527 (MainThread):   invalid identifier 'L.L_PARTKEY'
+2021-02-18 01:42:35.868044 (MainThread):   compiled SQL at target\compiled\dbtpoc\models\FactLineItem.sql
+2021-02-18 01:42:35.869042 (MainThread): 
+Done. PASS=1 WARN=0 ERROR=1 SKIP=0 TOTAL=2
+2021-02-18 01:42:35.869042 (MainThread): Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001DADC859F48>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001DADC5F1388>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001DADC9C9D88>]}
+2021-02-18 01:42:35.870478 (MainThread): Flushing usage events
+2021-02-18 01:42:50.902431 (MainThread): Running with dbt=0.18.0
+2021-02-18 01:42:51.608424 (MainThread): running dbt with arguments Namespace(cls=<class 'dbt.task.run.RunTask'>, debug=False, defer=None, exclude=None, fail_fast=False, full_refresh=False, log_cache_events=False, log_format='default', models=None, partial_parse=None, profile=None, profiles_dir='C:\\Users\\jkolpak\\.dbt', project_dir=None, record_timing_info=None, rpc_method='run', selector_name=None, single_threaded=False, state=None, strict=False, target=None, test_new_parser=False, threads=None, use_cache=True, use_colors=None, vars='{}', version_check=True, warn_error=False, which='run', write_json=True)
+2021-02-18 01:42:51.619487 (MainThread): Tracking: tracking
+2021-02-18 01:42:51.619487 (MainThread): Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002478F817508>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002478F817308>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000247919C1D08>]}
+2021-02-18 01:42:51.641071 (MainThread): Partial parsing not enabled
+2021-02-18 01:42:51.642146 (MainThread): Parsing macros\get_custom_schema.sql
+2021-02-18 01:42:51.643063 (MainThread): Parsing macros\grant_select_on_schemas.sql
+2021-02-18 01:42:51.645057 (MainThread): Parsing macros\adapters.sql
+2021-02-18 01:42:51.679125 (MainThread): Parsing macros\catalog.sql
+2021-02-18 01:42:51.681000 (MainThread): Parsing macros\materializations\incremental.sql
+2021-02-18 01:42:51.693190 (MainThread): Parsing macros\materializations\merge.sql
+2021-02-18 01:42:51.696138 (MainThread): Parsing macros\materializations\table.sql
+2021-02-18 01:42:51.701059 (MainThread): Parsing macros\materializations\view.sql
+2021-02-18 01:42:51.705953 (MainThread): Parsing macros\core.sql
+2021-02-18 01:42:51.711509 (MainThread): Parsing macros\adapters\common.sql
+2021-02-18 01:42:51.761262 (MainThread): Parsing macros\etc\datetime.sql
+2021-02-18 01:42:51.771315 (MainThread): Parsing macros\etc\get_custom_alias.sql
+2021-02-18 01:42:51.773272 (MainThread): Parsing macros\etc\get_custom_database.sql
+2021-02-18 01:42:51.775267 (MainThread): Parsing macros\etc\get_custom_schema.sql
+2021-02-18 01:42:51.777299 (MainThread): Parsing macros\etc\is_incremental.sql
+2021-02-18 01:42:51.778295 (MainThread): Parsing macros\etc\query.sql
+2021-02-18 01:42:51.780487 (MainThread): Parsing macros\materializations\helpers.sql
+2021-02-18 01:42:51.789581 (MainThread): Parsing macros\materializations\common\merge.sql
+2021-02-18 01:42:51.806526 (MainThread): Parsing macros\materializations\incremental\helpers.sql
+2021-02-18 01:42:51.808543 (MainThread): Parsing macros\materializations\incremental\incremental.sql
+2021-02-18 01:42:51.815294 (MainThread): Parsing macros\materializations\seed\seed.sql
+2021-02-18 01:42:51.840354 (MainThread): Parsing macros\materializations\snapshot\snapshot.sql
+2021-02-18 01:42:51.871534 (MainThread): Parsing macros\materializations\snapshot\snapshot_merge.sql
+2021-02-18 01:42:51.873568 (MainThread): Parsing macros\materializations\snapshot\strategies.sql
+2021-02-18 01:42:51.891729 (MainThread): Parsing macros\materializations\table\table.sql
+2021-02-18 01:42:51.898430 (MainThread): Parsing macros\materializations\view\create_or_replace_view.sql
+2021-02-18 01:42:51.904474 (MainThread): Parsing macros\materializations\view\view.sql
+2021-02-18 01:42:51.910333 (MainThread): Parsing macros\schema_tests\accepted_values.sql
+2021-02-18 01:42:51.913325 (MainThread): Parsing macros\schema_tests\not_null.sql
+2021-02-18 01:42:51.915332 (MainThread): Parsing macros\schema_tests\relationships.sql
+2021-02-18 01:42:51.917337 (MainThread): Parsing macros\schema_tests\unique.sql
+2021-02-18 01:42:51.924172 (MainThread): * Deprecation Warning: dbt v0.17.0 introduces a new config format for the
+dbt_project.yml file. Support for the existing version 1 format will be removed
+in a future release of dbt. The following packages are currently configured with
+config version 1:
+ - dbtpoc
+
+For upgrading instructions, consult the documentation:
+  https://docs.getdbt.com/docs/guides/migration-guide/upgrading-to-0-17-0
+
+2021-02-18 01:42:51.932070 (MainThread): Sending event: {'category': 'dbt', 'action': 'deprecation', 'label': '3ded9441-cdf0-460b-942f-ec574540c691', 'property_': 'warn', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000024791A41988>]}
+2021-02-18 01:42:51.933069 (MainThread): Partial parsing not enabled
+2021-02-18 01:42:51.979498 (MainThread): Acquiring new snowflake connection "model.dbtpoc.DimSupplier".
+2021-02-18 01:42:52.000317 (MainThread): Acquiring new snowflake connection "model.dbtpoc.FactLineItem".
+2021-02-18 01:42:52.175743 (MainThread): Found 2 models, 0 tests, 0 snapshots, 0 analyses, 145 macros, 0 operations, 0 seed files, 0 sources
+2021-02-18 01:42:52.176951 (MainThread): 
+2021-02-18 01:42:52.177698 (MainThread): Acquiring new snowflake connection "master".
+2021-02-18 01:42:52.181237 (ThreadPoolExecutor-0_0): Acquiring new snowflake connection "list_DBT_POC".
+2021-02-18 01:42:52.200292 (ThreadPoolExecutor-0_0): Using snowflake connection "list_DBT_POC".
+2021-02-18 01:42:52.200292 (ThreadPoolExecutor-0_0): On list_DBT_POC: /* {"app": "dbt", "dbt_version": "0.18.0", "profile_name": "dbtpoc", "target_name": "dev", "connection_name": "list_DBT_POC"} */
+
+    show terse schemas in database DBT_POC
+    limit 10000
+2021-02-18 01:42:52.200292 (ThreadPoolExecutor-0_0): Opening a new connection, currently in state init
+2021-02-18 01:42:53.571343 (ThreadPoolExecutor-0_0): SQL status: SUCCESS 5 in 1.37 seconds
+2021-02-18 01:42:53.580390 (ThreadPoolExecutor-0_0): On list_DBT_POC: Close
+2021-02-18 01:42:54.594379 (ThreadPoolExecutor-1_0): Acquiring new snowflake connection "list_DBT_POC_dbt_jkolpak".
+2021-02-18 01:42:54.604269 (ThreadPoolExecutor-1_0): Using snowflake connection "list_DBT_POC_dbt_jkolpak".
+2021-02-18 01:42:54.604269 (ThreadPoolExecutor-1_0): On list_DBT_POC_dbt_jkolpak: /* {"app": "dbt", "dbt_version": "0.18.0", "profile_name": "dbtpoc", "target_name": "dev", "connection_name": "list_DBT_POC_dbt_jkolpak"} */
+
+    show terse objects in DBT_POC.dbt_jkolpak
+2021-02-18 01:42:54.604269 (ThreadPoolExecutor-1_0): Opening a new connection, currently in state init
+2021-02-18 01:42:56.189660 (ThreadPoolExecutor-1_0): SQL status: SUCCESS 6 in 1.59 seconds
+2021-02-18 01:42:56.201238 (ThreadPoolExecutor-1_0): On list_DBT_POC_dbt_jkolpak: Close
+2021-02-18 01:42:56.572160 (MainThread): Using snowflake connection "master".
+2021-02-18 01:42:56.572160 (MainThread): On master: BEGIN
+2021-02-18 01:42:56.573103 (MainThread): Opening a new connection, currently in state init
+2021-02-18 01:42:57.520197 (MainThread): SQL status: SUCCESS 1 in 0.95 seconds
+2021-02-18 01:42:57.520197 (MainThread): On master: COMMIT
+2021-02-18 01:42:57.520197 (MainThread): Using snowflake connection "master".
+2021-02-18 01:42:57.521167 (MainThread): On master: COMMIT
+2021-02-18 01:42:57.964524 (MainThread): SQL status: SUCCESS 1 in 0.44 seconds
+2021-02-18 01:42:57.964524 (MainThread): On master: Close
+2021-02-18 01:42:58.276436 (MainThread): 19:42:58 | Concurrency: 16 threads (target='dev')
+2021-02-18 01:42:58.277627 (MainThread): 19:42:58 | 
+2021-02-18 01:42:58.295728 (Thread-1): Began running node model.dbtpoc.DimSupplier
+2021-02-18 01:42:58.298673 (Thread-1): 19:42:58 | 1 of 2 START table model dbt_jkolpak.DimSupplier..................... [RUN]
+2021-02-18 01:42:58.303227 (Thread-1): Acquiring new snowflake connection "model.dbtpoc.DimSupplier".
+2021-02-18 01:42:58.303227 (Thread-1): Compiling model.dbtpoc.DimSupplier
+2021-02-18 01:42:58.325390 (Thread-1): Writing injected SQL for node "model.dbtpoc.DimSupplier"
+2021-02-18 01:42:58.326432 (Thread-1): finished collecting timing info
+2021-02-18 01:42:58.362492 (Thread-1): Writing runtime SQL for node "model.dbtpoc.DimSupplier"
+2021-02-18 01:42:58.364486 (Thread-1): Using snowflake connection "model.dbtpoc.DimSupplier".
+2021-02-18 01:42:58.364486 (Thread-1): On model.dbtpoc.DimSupplier: BEGIN
+2021-02-18 01:42:58.364486 (Thread-1): Opening a new connection, currently in state init
+2021-02-18 01:42:59.145099 (Thread-1): SQL status: SUCCESS 1 in 0.78 seconds
+2021-02-18 01:42:59.145099 (Thread-1): Using snowflake connection "model.dbtpoc.DimSupplier".
+2021-02-18 01:42:59.145099 (Thread-1): On model.dbtpoc.DimSupplier: /* {"app": "dbt", "dbt_version": "0.18.0", "profile_name": "dbtpoc", "target_name": "dev", "node_id": "model.dbtpoc.DimSupplier"} */
+
+
+      create or replace transient table DBT_POC.dbt_jkolpak.DimSupplier  as
+      (
+
+SELECT S_SUPPKEY AS SUPPLIER_KEY
+    , S_NAME AS SUPPLIER_NAME
+    , S_ADDRESS AS SUPPLIER_ADDRESS
+    , S_PHONE AS SUPPLIER_PHONE_NUMBER
+    , S_ACCTBAL AS SUPPLIER_ACCOUNT_BALANCE
+    , S_COMMENT AS SUPPLIER_COMMENT
+    , N.N_NAME AS SUPPLIER_NATION
+    , R.R_NAME AS SUPPLIER_REGION
+FROM "SNOWFLAKE_SAMPLE_DATA"."TPCH_SF10"."SUPPLIER" S
+LEFT JOIN "SNOWFLAKE_SAMPLE_DATA"."TPCH_SF10"."NATION" N ON S.S_NATIONKEY = N.N_NATIONKEY
+LEFT JOIN "SNOWFLAKE_SAMPLE_DATA"."TPCH_SF10"."REGION" R ON N.N_REGIONKEY = R.R_REGIONKEY
+      );
+2021-02-18 01:43:02.446416 (Thread-1): SQL status: SUCCESS 1 in 3.30 seconds
+2021-02-18 01:43:02.449089 (Thread-1): On model.dbtpoc.DimSupplier: COMMIT
+2021-02-18 01:43:02.450257 (Thread-1): Using snowflake connection "model.dbtpoc.DimSupplier".
+2021-02-18 01:43:02.450394 (Thread-1): On model.dbtpoc.DimSupplier: COMMIT
+2021-02-18 01:43:02.733457 (Thread-1): SQL status: SUCCESS 1 in 0.28 seconds
+2021-02-18 01:43:02.765768 (Thread-1): finished collecting timing info
+2021-02-18 01:43:02.765768 (Thread-1): On model.dbtpoc.DimSupplier: Close
+2021-02-18 01:43:03.121707 (Thread-1): Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '3ded9441-cdf0-460b-942f-ec574540c691', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000024791BD3348>]}
+2021-02-18 01:43:03.124765 (Thread-1): 19:43:03 | 1 of 2 OK created table model dbt_jkolpak.DimSupplier................ [SUCCESS 1 in 4.82s]
+2021-02-18 01:43:03.126688 (Thread-1): Finished running node model.dbtpoc.DimSupplier
+2021-02-18 01:43:03.128519 (Thread-3): Began running node model.dbtpoc.FactLineItem
+2021-02-18 01:43:03.131677 (Thread-3): 19:43:03 | 2 of 2 START incremental model dbt_jkolpak.FactLineItem.............. [RUN]
+2021-02-18 01:43:03.134671 (Thread-3): Acquiring new snowflake connection "model.dbtpoc.FactLineItem".
+2021-02-18 01:43:03.135596 (Thread-3): Compiling model.dbtpoc.FactLineItem
+2021-02-18 01:43:03.164462 (Thread-3): Writing injected SQL for node "model.dbtpoc.FactLineItem"
+2021-02-18 01:43:03.167053 (Thread-3): finished collecting timing info
+2021-02-18 01:43:03.214707 (Thread-3): Using snowflake connection "model.dbtpoc.FactLineItem".
+2021-02-18 01:43:03.214707 (Thread-3): On model.dbtpoc.FactLineItem: /* {"app": "dbt", "dbt_version": "0.18.0", "profile_name": "dbtpoc", "target_name": "dev", "node_id": "model.dbtpoc.FactLineItem"} */
+
+    
+
+      create or replace temporary table DBT_POC.dbt_jkolpak.FactLineItem__dbt_tmp  as
+      (
+
+SELECT L_ORDERKEY AS ORDER_KEY
+    , L_LINENUMBER AS LINE_NUMBER
+    , L_QUANTITY AS QUANTITY
+    , L_EXTENDEDPRICE AS EXTENDED_PRICE
+    , L_DISCOUNT AS LINE_DISCOUNT
+    , L_TAX AS LINE_TAX
+    , CASE L_RETURNFLAG
+        WHEN 'R' THEN 'Returned'
+        WHEN 'A' THEN 'Available for Return'
+        WHEN 'N' THEN 'Not Available for Return'
+      END AS LINE_RETURN_FLAG  
+    , L_SHIPDATE AS LINE_SHIP_DATE
+    , L_RECEIPTDATE AS LINE_RECEIPT_DATE
+    , L_COMMITDATE AS LINE_COMMITDATE
+    , L_RECEIPTDATE - L_SHIPDATE AS SHIP_RECEIPT_LAG
+    , L_PARTKEY AS LINE_PART_KEY
+    , L_SUPPKEY AS LINE_SUPPLIER_KEY 
+FROM "SNOWFLAKE_SAMPLE_DATA"."TPCH_SF1"."LINEITEM" L
+LEFT JOIN "SNOWFLAKE_SAMPLE_DATA"."TPCH_SF10"."PART" P ON L.L_PARTKEY = P.P_PARTKEY
+LEFT JOIN DBT_POC.dbt_jkolpak.DimSupplier S ON L.L_SUPPKEY = S.SUPPLIER_NAME
+LEFT JOIN "SNOWFLAKE_SAMPLE_DATA"."TPCH_SF10"."ORDERS" O ON L.L_ORDERKEY = O.O_ORDERKEY
+LEFT JOIN "SNOWFLAKE_SAMPLE_DATA"."TPCH_SF10"."CUSTOMER" C ON O.O_CUSTKEY = C.C_CUSTKEY
+
+
+
+  -- this filter will only be applied on an incremental run
+WHERE L_RECEIPTDATE > (select max(L_RECEIPTDATE ) from DBT_POC.dbt_jkolpak.FactLineItem)
+
+
+      );
+2021-02-18 01:43:03.215151 (Thread-3): Opening a new connection, currently in state init
+2021-02-18 01:43:06.122295 (Thread-3): Snowflake query id: 019a5ce7-0572-2c84-0000-4015003030ea
+2021-02-18 01:43:06.122295 (Thread-3): Snowflake error: 002036 (42601): SQL compilation error:
+Subquery containing correlated aggregate function [MAX(L.L_RECEIPTDATE)] can only appear in having or select clause
+2021-02-18 01:43:06.123213 (Thread-3): finished collecting timing info
+2021-02-18 01:43:06.123213 (Thread-3): On model.dbtpoc.FactLineItem: Close
+2021-02-18 01:43:06.674039 (Thread-3): Database Error in model FactLineItem (models\FactLineItem.sql)
+  002036 (42601): SQL compilation error:
+  Subquery containing correlated aggregate function [MAX(L.L_RECEIPTDATE)] can only appear in having or select clause
+  compiled SQL at target\compiled\dbtpoc\models\FactLineItem.sql
+Traceback (most recent call last):
+  File "c:\users\jkolpak\dbt-venv\lib\site-packages\dbt\adapters\snowflake\connections.py", line 161, in exception_handler
+    yield
+  File "c:\users\jkolpak\dbt-venv\lib\site-packages\dbt\adapters\sql\connections.py", line 78, in add_query
+    cursor.execute(sql, bindings)
+  File "c:\users\jkolpak\dbt-venv\lib\site-packages\snowflake\connector\cursor.py", line 596, in execute
+    errvalue)
+  File "c:\users\jkolpak\dbt-venv\lib\site-packages\snowflake\connector\errors.py", line 123, in errorhandler_wrapper
+    cursor.errorhandler(connection, cursor, error_class, error_value)
+  File "c:\users\jkolpak\dbt-venv\lib\site-packages\snowflake\connector\errors.py", line 88, in default_errorhandler
+    done_format_msg=error_value.get('done_format_msg'))
+snowflake.connector.errors.ProgrammingError: 002036 (42601): SQL compilation error:
+Subquery containing correlated aggregate function [MAX(L.L_RECEIPTDATE)] can only appear in having or select clause
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "c:\users\jkolpak\dbt-venv\lib\site-packages\dbt\task\base.py", line 333, in safe_run
+    result = self.compile_and_execute(manifest, ctx)
+  File "c:\users\jkolpak\dbt-venv\lib\site-packages\dbt\task\base.py", line 276, in compile_and_execute
+    result = self.run(ctx.node, manifest)
+  File "c:\users\jkolpak\dbt-venv\lib\site-packages\dbt\task\base.py", line 378, in run
+    return self.execute(compiled_node, manifest)
+  File "c:\users\jkolpak\dbt-venv\lib\site-packages\dbt\task\run.py", line 233, in execute
+    result = MacroGenerator(materialization_macro, context)()
+  File "c:\users\jkolpak\dbt-venv\lib\site-packages\dbt\clients\jinja.py", line 327, in __call__
+    return self.call_macro(*args, **kwargs)
+  File "c:\users\jkolpak\dbt-venv\lib\site-packages\dbt\clients\jinja.py", line 257, in call_macro
+    return macro(*args, **kwargs)
+  File "c:\users\jkolpak\dbt-venv\lib\site-packages\jinja2\runtime.py", line 675, in __call__
+    return self._invoke(arguments, autoescape)
+  File "c:\users\jkolpak\dbt-venv\lib\site-packages\jinja2\runtime.py", line 679, in _invoke
+    rv = self._func(*arguments)
+  File "<template>", line 96, in macro
+  File "c:\users\jkolpak\dbt-venv\lib\site-packages\jinja2\sandbox.py", line 462, in call
+    return __context.call(__obj, *args, **kwargs)
+  File "c:\users\jkolpak\dbt-venv\lib\site-packages\jinja2\runtime.py", line 290, in call
+    return __obj(*args, **kwargs)
+  File "c:\users\jkolpak\dbt-venv\lib\site-packages\dbt\clients\jinja.py", line 327, in __call__
+    return self.call_macro(*args, **kwargs)
+  File "c:\users\jkolpak\dbt-venv\lib\site-packages\dbt\clients\jinja.py", line 257, in call_macro
+    return macro(*args, **kwargs)
+  File "c:\users\jkolpak\dbt-venv\lib\site-packages\jinja2\runtime.py", line 675, in __call__
+    return self._invoke(arguments, autoescape)
+  File "c:\users\jkolpak\dbt-venv\lib\site-packages\jinja2\runtime.py", line 679, in _invoke
+    rv = self._func(*arguments)
+  File "<template>", line 33, in macro
+  File "c:\users\jkolpak\dbt-venv\lib\site-packages\jinja2\sandbox.py", line 462, in call
+    return __context.call(__obj, *args, **kwargs)
+  File "c:\users\jkolpak\dbt-venv\lib\site-packages\jinja2\runtime.py", line 290, in call
+    return __obj(*args, **kwargs)
+  File "c:\users\jkolpak\dbt-venv\lib\site-packages\dbt\clients\jinja.py", line 327, in __call__
+    return self.call_macro(*args, **kwargs)
+  File "c:\users\jkolpak\dbt-venv\lib\site-packages\dbt\clients\jinja.py", line 257, in call_macro
+    return macro(*args, **kwargs)
+  File "c:\users\jkolpak\dbt-venv\lib\site-packages\jinja2\runtime.py", line 675, in __call__
+    return self._invoke(arguments, autoescape)
+  File "c:\users\jkolpak\dbt-venv\lib\site-packages\jinja2\runtime.py", line 679, in _invoke
+    rv = self._func(*arguments)
+  File "<template>", line 41, in macro
+  File "c:\users\jkolpak\dbt-venv\lib\site-packages\jinja2\sandbox.py", line 462, in call
+    return __context.call(__obj, *args, **kwargs)
+  File "c:\users\jkolpak\dbt-venv\lib\site-packages\jinja2\runtime.py", line 290, in call
+    return __obj(*args, **kwargs)
+  File "c:\users\jkolpak\dbt-venv\lib\site-packages\dbt\adapters\base\impl.py", line 227, in execute
+    fetch=fetch
+  File "c:\users\jkolpak\dbt-venv\lib\site-packages\dbt\adapters\sql\connections.py", line 123, in execute
+    _, cursor = self.add_query(sql, auto_begin)
+  File "c:\users\jkolpak\dbt-venv\lib\site-packages\dbt\adapters\snowflake\connections.py", line 312, in add_query
+    abridge_sql_log=abridge_sql_log
+  File "c:\users\jkolpak\dbt-venv\lib\site-packages\dbt\adapters\sql\connections.py", line 86, in add_query
+    return connection, cursor
+  File "C:\Users\jkolpak\AppData\Local\Continuum\anaconda3\lib\contextlib.py", line 130, in __exit__
+    self.gen.throw(type, value, traceback)
+  File "c:\users\jkolpak\dbt-venv\lib\site-packages\dbt\adapters\snowflake\connections.py", line 178, in exception_handler
+    raise DatabaseException(msg)
+dbt.exceptions.DatabaseException: Database Error in model FactLineItem (models\FactLineItem.sql)
+  002036 (42601): SQL compilation error:
+  Subquery containing correlated aggregate function [MAX(L.L_RECEIPTDATE)] can only appear in having or select clause
+  compiled SQL at target\compiled\dbtpoc\models\FactLineItem.sql
+2021-02-18 01:43:06.680551 (Thread-3): Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '3ded9441-cdf0-460b-942f-ec574540c691', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000024791C037C8>]}
+2021-02-18 01:43:06.682524 (Thread-3): 19:43:06 | 2 of 2 ERROR creating incremental model dbt_jkolpak.FactLineItem..... [ERROR in 3.55s]
+2021-02-18 01:43:06.684519 (Thread-3): Finished running node model.dbtpoc.FactLineItem
+2021-02-18 01:43:06.785069 (MainThread): Acquiring new snowflake connection "master".
+2021-02-18 01:43:06.785069 (MainThread): Using snowflake connection "master".
+2021-02-18 01:43:06.786100 (MainThread): On master: BEGIN
+2021-02-18 01:43:06.786100 (MainThread): Opening a new connection, currently in state closed
+2021-02-18 01:43:08.066220 (MainThread): SQL status: SUCCESS 1 in 1.28 seconds
+2021-02-18 01:43:08.066220 (MainThread): On master: COMMIT
+2021-02-18 01:43:08.067238 (MainThread): Using snowflake connection "master".
+2021-02-18 01:43:08.067238 (MainThread): On master: COMMIT
+2021-02-18 01:43:08.693855 (MainThread): SQL status: SUCCESS 1 in 0.63 seconds
+2021-02-18 01:43:08.694792 (MainThread): On master: Close
+2021-02-18 01:43:09.072267 (MainThread): 19:43:09 | 
+2021-02-18 01:43:09.073096 (MainThread): 19:43:09 | Finished running 1 table model, 1 incremental model in 16.90s.
+2021-02-18 01:43:09.074071 (MainThread): Connection 'master' was properly closed.
+2021-02-18 01:43:09.075087 (MainThread): Connection 'list_DBT_POC' was properly closed.
+2021-02-18 01:43:09.075087 (MainThread): Connection 'list_DBT_POC_dbt_jkolpak' was properly closed.
+2021-02-18 01:43:09.075087 (MainThread): Connection 'model.dbtpoc.DimSupplier' was properly closed.
+2021-02-18 01:43:09.075087 (MainThread): Connection 'model.dbtpoc.FactLineItem' was properly closed.
+2021-02-18 01:43:09.094439 (MainThread): 
+2021-02-18 01:43:09.095434 (MainThread): Completed with 1 error and 0 warnings:
+2021-02-18 01:43:09.096432 (MainThread): 
+2021-02-18 01:43:09.096432 (MainThread): Database Error in model FactLineItem (models\FactLineItem.sql)
+2021-02-18 01:43:09.098427 (MainThread):   002036 (42601): SQL compilation error:
+2021-02-18 01:43:09.098427 (MainThread):   Subquery containing correlated aggregate function [MAX(L.L_RECEIPTDATE)] can only appear in having or select clause
+2021-02-18 01:43:09.099424 (MainThread):   compiled SQL at target\compiled\dbtpoc\models\FactLineItem.sql
+2021-02-18 01:43:09.100562 (MainThread): 
+Done. PASS=1 WARN=0 ERROR=1 SKIP=0 TOTAL=2
+2021-02-18 01:43:09.101563 (MainThread): Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000024791C18F88>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000024791A919C8>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000024791C791C8>]}
+2021-02-18 01:43:09.101563 (MainThread): Flushing usage events
+2021-02-18 01:44:23.742005 (MainThread): Running with dbt=0.18.0
+2021-02-18 01:44:24.393589 (MainThread): running dbt with arguments Namespace(cls=<class 'dbt.task.run.RunTask'>, debug=False, defer=None, exclude=None, fail_fast=False, full_refresh=False, log_cache_events=False, log_format='default', models=None, partial_parse=None, profile=None, profiles_dir='C:\\Users\\jkolpak\\.dbt', project_dir=None, record_timing_info=None, rpc_method='run', selector_name=None, single_threaded=False, state=None, strict=False, target=None, test_new_parser=False, threads=None, use_cache=True, use_colors=None, vars='{}', version_check=True, warn_error=False, which='run', write_json=True)
+2021-02-18 01:44:24.393589 (MainThread): Tracking: tracking
+2021-02-18 01:44:24.393589 (MainThread): Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000013FE62411C8>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000013FEA2D3288>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000013FEA2D3148>]}
+2021-02-18 01:44:24.417731 (MainThread): Partial parsing not enabled
+2021-02-18 01:44:24.418758 (MainThread): Parsing macros\get_custom_schema.sql
+2021-02-18 01:44:24.419675 (MainThread): Parsing macros\grant_select_on_schemas.sql
+2021-02-18 01:44:24.421832 (MainThread): Parsing macros\adapters.sql
+2021-02-18 01:44:24.452190 (MainThread): Parsing macros\catalog.sql
+2021-02-18 01:44:24.454307 (MainThread): Parsing macros\materializations\incremental.sql
+2021-02-18 01:44:24.463839 (MainThread): Parsing macros\materializations\merge.sql
+2021-02-18 01:44:24.465374 (MainThread): Parsing macros\materializations\table.sql
+2021-02-18 01:44:24.469600 (MainThread): Parsing macros\materializations\view.sql
+2021-02-18 01:44:24.474276 (MainThread): Parsing macros\core.sql
+2021-02-18 01:44:24.477449 (MainThread): Parsing macros\adapters\common.sql
+2021-02-18 01:44:24.524221 (MainThread): Parsing macros\etc\datetime.sql
+2021-02-18 01:44:24.533201 (MainThread): Parsing macros\etc\get_custom_alias.sql
+2021-02-18 01:44:24.534193 (MainThread): Parsing macros\etc\get_custom_database.sql
+2021-02-18 01:44:24.536198 (MainThread): Parsing macros\etc\get_custom_schema.sql
+2021-02-18 01:44:24.538190 (MainThread): Parsing macros\etc\is_incremental.sql
+2021-02-18 01:44:24.540178 (MainThread): Parsing macros\etc\query.sql
+2021-02-18 01:44:24.541176 (MainThread): Parsing macros\materializations\helpers.sql
+2021-02-18 01:44:24.552159 (MainThread): Parsing macros\materializations\common\merge.sql
+2021-02-18 01:44:24.568110 (MainThread): Parsing macros\materializations\incremental\helpers.sql
+2021-02-18 01:44:24.570126 (MainThread): Parsing macros\materializations\incremental\incremental.sql
+2021-02-18 01:44:24.577099 (MainThread): Parsing macros\materializations\seed\seed.sql
+2021-02-18 01:44:24.600166 (MainThread): Parsing macros\materializations\snapshot\snapshot.sql
+2021-02-18 01:44:24.631100 (MainThread): Parsing macros\materializations\snapshot\snapshot_merge.sql
+2021-02-18 01:44:24.633098 (MainThread): Parsing macros\materializations\snapshot\strategies.sql
+2021-02-18 01:44:24.650042 (MainThread): Parsing macros\materializations\table\table.sql
+2021-02-18 01:44:24.657050 (MainThread): Parsing macros\materializations\view\create_or_replace_view.sql
+2021-02-18 01:44:24.661926 (MainThread): Parsing macros\materializations\view\view.sql
+2021-02-18 01:44:24.669320 (MainThread): Parsing macros\schema_tests\accepted_values.sql
+2021-02-18 01:44:24.671905 (MainThread): Parsing macros\schema_tests\not_null.sql
+2021-02-18 01:44:24.674331 (MainThread): Parsing macros\schema_tests\relationships.sql
+2021-02-18 01:44:24.675911 (MainThread): Parsing macros\schema_tests\unique.sql
+2021-02-18 01:44:24.682886 (MainThread): * Deprecation Warning: dbt v0.17.0 introduces a new config format for the
+dbt_project.yml file. Support for the existing version 1 format will be removed
+in a future release of dbt. The following packages are currently configured with
+config version 1:
+ - dbtpoc
+
+For upgrading instructions, consult the documentation:
+  https://docs.getdbt.com/docs/guides/migration-guide/upgrading-to-0-17-0
+
+2021-02-18 01:44:24.697759 (MainThread): Sending event: {'category': 'dbt', 'action': 'deprecation', 'label': 'c217089c-a12e-4d5b-9d5a-cba0b8424638', 'property_': 'warn', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000013FEA327B48>]}
+2021-02-18 01:44:24.698756 (MainThread): Partial parsing not enabled
+2021-02-18 01:44:24.743665 (MainThread): Acquiring new snowflake connection "model.dbtpoc.DimSupplier".
+2021-02-18 01:44:24.762658 (MainThread): Acquiring new snowflake connection "model.dbtpoc.FactLineItem".
+2021-02-18 01:44:24.924284 (MainThread): Found 2 models, 0 tests, 0 snapshots, 0 analyses, 145 macros, 0 operations, 0 seed files, 0 sources
+2021-02-18 01:44:24.925282 (MainThread): 
+2021-02-18 01:44:24.925282 (MainThread): Acquiring new snowflake connection "master".
+2021-02-18 01:44:24.929133 (ThreadPoolExecutor-0_0): Acquiring new snowflake connection "list_DBT_POC".
+2021-02-18 01:44:24.944296 (ThreadPoolExecutor-0_0): Using snowflake connection "list_DBT_POC".
+2021-02-18 01:44:24.945293 (ThreadPoolExecutor-0_0): On list_DBT_POC: /* {"app": "dbt", "dbt_version": "0.18.0", "profile_name": "dbtpoc", "target_name": "dev", "connection_name": "list_DBT_POC"} */
+
+    show terse schemas in database DBT_POC
+    limit 10000
+2021-02-18 01:44:24.945293 (ThreadPoolExecutor-0_0): Opening a new connection, currently in state init
+2021-02-18 01:44:26.163387 (ThreadPoolExecutor-0_0): SQL status: SUCCESS 5 in 1.22 seconds
+2021-02-18 01:44:26.171662 (ThreadPoolExecutor-0_0): On list_DBT_POC: Close
+2021-02-18 01:44:26.434142 (ThreadPoolExecutor-1_0): Acquiring new snowflake connection "list_DBT_POC_dbt_jkolpak".
+2021-02-18 01:44:26.447147 (ThreadPoolExecutor-1_0): Using snowflake connection "list_DBT_POC_dbt_jkolpak".
+2021-02-18 01:44:26.448144 (ThreadPoolExecutor-1_0): On list_DBT_POC_dbt_jkolpak: /* {"app": "dbt", "dbt_version": "0.18.0", "profile_name": "dbtpoc", "target_name": "dev", "connection_name": "list_DBT_POC_dbt_jkolpak"} */
+
+    show terse objects in DBT_POC.dbt_jkolpak
+2021-02-18 01:44:26.448144 (ThreadPoolExecutor-1_0): Opening a new connection, currently in state init
+2021-02-18 01:44:27.473078 (ThreadPoolExecutor-1_0): SQL status: SUCCESS 6 in 1.02 seconds
+2021-02-18 01:44:27.480254 (ThreadPoolExecutor-1_0): On list_DBT_POC_dbt_jkolpak: Close
+2021-02-18 01:44:27.711037 (MainThread): Using snowflake connection "master".
+2021-02-18 01:44:27.711577 (MainThread): On master: BEGIN
+2021-02-18 01:44:27.711577 (MainThread): Opening a new connection, currently in state init
+2021-02-18 01:44:28.590077 (MainThread): SQL status: SUCCESS 1 in 0.88 seconds
+2021-02-18 01:44:28.590077 (MainThread): On master: COMMIT
+2021-02-18 01:44:28.590077 (MainThread): Using snowflake connection "master".
+2021-02-18 01:44:28.590077 (MainThread): On master: COMMIT
+2021-02-18 01:44:28.983781 (MainThread): SQL status: SUCCESS 1 in 0.39 seconds
+2021-02-18 01:44:28.983781 (MainThread): On master: Close
+2021-02-18 01:44:29.410399 (MainThread): 19:44:29 | Concurrency: 16 threads (target='dev')
+2021-02-18 01:44:29.411398 (MainThread): 19:44:29 | 
+2021-02-18 01:44:29.419539 (Thread-1): Began running node model.dbtpoc.DimSupplier
+2021-02-18 01:44:29.422932 (Thread-1): 19:44:29 | 1 of 2 START table model dbt_jkolpak.DimSupplier..................... [RUN]
+2021-02-18 01:44:29.424532 (Thread-1): Acquiring new snowflake connection "model.dbtpoc.DimSupplier".
+2021-02-18 01:44:29.424532 (Thread-1): Compiling model.dbtpoc.DimSupplier
+2021-02-18 01:44:29.454579 (Thread-1): Writing injected SQL for node "model.dbtpoc.DimSupplier"
+2021-02-18 01:44:29.454579 (Thread-1): finished collecting timing info
+2021-02-18 01:44:29.491133 (Thread-1): Writing runtime SQL for node "model.dbtpoc.DimSupplier"
+2021-02-18 01:44:29.492721 (Thread-1): Using snowflake connection "model.dbtpoc.DimSupplier".
+2021-02-18 01:44:29.492721 (Thread-1): On model.dbtpoc.DimSupplier: BEGIN
+2021-02-18 01:44:29.492721 (Thread-1): Opening a new connection, currently in state init
+2021-02-18 01:44:30.640738 (Thread-1): SQL status: SUCCESS 1 in 1.15 seconds
+2021-02-18 01:44:30.641735 (Thread-1): Using snowflake connection "model.dbtpoc.DimSupplier".
+2021-02-18 01:44:30.641735 (Thread-1): On model.dbtpoc.DimSupplier: /* {"app": "dbt", "dbt_version": "0.18.0", "profile_name": "dbtpoc", "target_name": "dev", "node_id": "model.dbtpoc.DimSupplier"} */
+
+
+      create or replace transient table DBT_POC.dbt_jkolpak.DimSupplier  as
+      (
+
+SELECT S_SUPPKEY AS SUPPLIER_KEY
+    , S_NAME AS SUPPLIER_NAME
+    , S_ADDRESS AS SUPPLIER_ADDRESS
+    , S_PHONE AS SUPPLIER_PHONE_NUMBER
+    , S_ACCTBAL AS SUPPLIER_ACCOUNT_BALANCE
+    , S_COMMENT AS SUPPLIER_COMMENT
+    , N.N_NAME AS SUPPLIER_NATION
+    , R.R_NAME AS SUPPLIER_REGION
+FROM "SNOWFLAKE_SAMPLE_DATA"."TPCH_SF10"."SUPPLIER" S
+LEFT JOIN "SNOWFLAKE_SAMPLE_DATA"."TPCH_SF10"."NATION" N ON S.S_NATIONKEY = N.N_NATIONKEY
+LEFT JOIN "SNOWFLAKE_SAMPLE_DATA"."TPCH_SF10"."REGION" R ON N.N_REGIONKEY = R.R_REGIONKEY
+      );
+2021-02-18 01:44:32.957318 (Thread-1): SQL status: SUCCESS 1 in 2.32 seconds
+2021-02-18 01:44:32.960310 (Thread-1): On model.dbtpoc.DimSupplier: COMMIT
+2021-02-18 01:44:32.960310 (Thread-1): Using snowflake connection "model.dbtpoc.DimSupplier".
+2021-02-18 01:44:32.960310 (Thread-1): On model.dbtpoc.DimSupplier: COMMIT
+2021-02-18 01:44:33.198854 (Thread-1): SQL status: SUCCESS 1 in 0.24 seconds
+2021-02-18 01:44:33.225875 (Thread-1): finished collecting timing info
+2021-02-18 01:44:33.225875 (Thread-1): On model.dbtpoc.DimSupplier: Close
+2021-02-18 01:44:33.456906 (Thread-1): Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'c217089c-a12e-4d5b-9d5a-cba0b8424638', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000013FEA6DB9C8>]}
+2021-02-18 01:44:33.459898 (Thread-1): 19:44:33 | 1 of 2 OK created table model dbt_jkolpak.DimSupplier................ [SUCCESS 1 in 4.03s]
+2021-02-18 01:44:33.462992 (Thread-1): Finished running node model.dbtpoc.DimSupplier
+2021-02-18 01:44:33.463885 (Thread-3): Began running node model.dbtpoc.FactLineItem
+2021-02-18 01:44:33.466008 (Thread-3): 19:44:33 | 2 of 2 START incremental model dbt_jkolpak.FactLineItem.............. [RUN]
+2021-02-18 01:44:33.467006 (Thread-3): Acquiring new snowflake connection "model.dbtpoc.FactLineItem".
+2021-02-18 01:44:33.467006 (Thread-3): Compiling model.dbtpoc.FactLineItem
+2021-02-18 01:44:33.487764 (Thread-3): Writing injected SQL for node "model.dbtpoc.FactLineItem"
+2021-02-18 01:44:33.489275 (Thread-3): finished collecting timing info
+2021-02-18 01:44:33.528441 (Thread-3): Using snowflake connection "model.dbtpoc.FactLineItem".
+2021-02-18 01:44:33.528441 (Thread-3): On model.dbtpoc.FactLineItem: /* {"app": "dbt", "dbt_version": "0.18.0", "profile_name": "dbtpoc", "target_name": "dev", "node_id": "model.dbtpoc.FactLineItem"} */
+
+    
+
+      create or replace temporary table DBT_POC.dbt_jkolpak.FactLineItem__dbt_tmp  as
+      (
+
+SELECT L_ORDERKEY AS ORDER_KEY
+    , L_LINENUMBER AS LINE_NUMBER
+    , L_QUANTITY AS QUANTITY
+    , L_EXTENDEDPRICE AS EXTENDED_PRICE
+    , L_DISCOUNT AS LINE_DISCOUNT
+    , L_TAX AS LINE_TAX
+    , CASE L_RETURNFLAG
+        WHEN 'R' THEN 'Returned'
+        WHEN 'A' THEN 'Available for Return'
+        WHEN 'N' THEN 'Not Available for Return'
+      END AS LINE_RETURN_FLAG  
+    , L_SHIPDATE AS LINE_SHIP_DATE
+    , L_RECEIPTDATE AS LINE_RECEIPT_DATE
+    , L_COMMITDATE AS LINE_COMMITDATE
+    , L_RECEIPTDATE - L_SHIPDATE AS SHIP_RECEIPT_LAG
+    , L_PARTKEY AS LINE_PART_KEY
+    , L_SUPPKEY AS LINE_SUPPLIER_KEY 
+FROM "SNOWFLAKE_SAMPLE_DATA"."TPCH_SF1"."LINEITEM" L
+LEFT JOIN "SNOWFLAKE_SAMPLE_DATA"."TPCH_SF10"."PART" P ON L.L_PARTKEY = P.P_PARTKEY
+LEFT JOIN DBT_POC.dbt_jkolpak.DimSupplier S ON L.L_SUPPKEY = S.SUPPLIER_NAME
+LEFT JOIN "SNOWFLAKE_SAMPLE_DATA"."TPCH_SF10"."ORDERS" O ON L.L_ORDERKEY = O.O_ORDERKEY
+LEFT JOIN "SNOWFLAKE_SAMPLE_DATA"."TPCH_SF10"."CUSTOMER" C ON O.O_CUSTKEY = C.C_CUSTKEY
+
+
+
+  -- this filter will only be applied on an incremental run
+WHERE L_RECEIPTDATE > (select max(LINE_RECEIPT_DATE ) from DBT_POC.dbt_jkolpak.FactLineItem)
+
+
+      );
+2021-02-18 01:44:33.528441 (Thread-3): Opening a new connection, currently in state init
+2021-02-18 01:44:36.892927 (Thread-3): SQL status: SUCCESS 1 in 3.36 seconds
+2021-02-18 01:44:36.913068 (Thread-3): Using snowflake connection "model.dbtpoc.FactLineItem".
+2021-02-18 01:44:36.913068 (Thread-3): On model.dbtpoc.FactLineItem: /* {"app": "dbt", "dbt_version": "0.18.0", "profile_name": "dbtpoc", "target_name": "dev", "node_id": "model.dbtpoc.FactLineItem"} */
+
+    describe table DBT_POC.dbt_jkolpak.FactLineItem__dbt_tmp
+2021-02-18 01:44:37.158455 (Thread-3): SQL status: SUCCESS 13 in 0.25 seconds
+2021-02-18 01:44:37.170422 (Thread-3): Using snowflake connection "model.dbtpoc.FactLineItem".
+2021-02-18 01:44:37.171417 (Thread-3): On model.dbtpoc.FactLineItem: /* {"app": "dbt", "dbt_version": "0.18.0", "profile_name": "dbtpoc", "target_name": "dev", "node_id": "model.dbtpoc.FactLineItem"} */
+
+    describe table DBT_POC.dbt_jkolpak.FactLineItem
+2021-02-18 01:44:37.498289 (Thread-3): SQL status: SUCCESS 13 in 0.33 seconds
+2021-02-18 01:44:37.508748 (Thread-3): Using snowflake connection "model.dbtpoc.FactLineItem".
+2021-02-18 01:44:37.509068 (Thread-3): On model.dbtpoc.FactLineItem: /* {"app": "dbt", "dbt_version": "0.18.0", "profile_name": "dbtpoc", "target_name": "dev", "node_id": "model.dbtpoc.FactLineItem"} */
+
+    describe table DBT_POC.dbt_jkolpak.FactLineItem
+2021-02-18 01:44:37.686509 (Thread-3): SQL status: SUCCESS 13 in 0.18 seconds
+2021-02-18 01:44:37.711043 (Thread-3): Writing runtime SQL for node "model.dbtpoc.FactLineItem"
+2021-02-18 01:44:37.712518 (Thread-3): Using snowflake connection "model.dbtpoc.FactLineItem".
+2021-02-18 01:44:37.712518 (Thread-3): On model.dbtpoc.FactLineItem: BEGIN
+2021-02-18 01:44:38.009611 (Thread-3): SQL status: SUCCESS 1 in 0.30 seconds
+2021-02-18 01:44:38.009611 (Thread-3): Using snowflake connection "model.dbtpoc.FactLineItem".
+2021-02-18 01:44:38.009611 (Thread-3): On model.dbtpoc.FactLineItem: /* {"app": "dbt", "dbt_version": "0.18.0", "profile_name": "dbtpoc", "target_name": "dev", "node_id": "model.dbtpoc.FactLineItem"} */
+
+
+        insert into DBT_POC.dbt_jkolpak.FactLineItem ("ORDER_KEY", "LINE_NUMBER", "QUANTITY", "EXTENDED_PRICE", "LINE_DISCOUNT", "LINE_TAX", "LINE_RETURN_FLAG", "LINE_SHIP_DATE", "LINE_RECEIPT_DATE", "LINE_COMMITDATE", "SHIP_RECEIPT_LAG", "LINE_PART_KEY", "LINE_SUPPLIER_KEY")
+        (
+            select "ORDER_KEY", "LINE_NUMBER", "QUANTITY", "EXTENDED_PRICE", "LINE_DISCOUNT", "LINE_TAX", "LINE_RETURN_FLAG", "LINE_SHIP_DATE", "LINE_RECEIPT_DATE", "LINE_COMMITDATE", "SHIP_RECEIPT_LAG", "LINE_PART_KEY", "LINE_SUPPLIER_KEY"
+            from DBT_POC.dbt_jkolpak.FactLineItem__dbt_tmp
+        );
+2021-02-18 01:44:38.410034 (Thread-3): SQL status: SUCCESS 0 in 0.40 seconds
+2021-02-18 01:44:38.412308 (Thread-3): On model.dbtpoc.FactLineItem: COMMIT
+2021-02-18 01:44:38.413309 (Thread-3): Using snowflake connection "model.dbtpoc.FactLineItem".
+2021-02-18 01:44:38.413309 (Thread-3): On model.dbtpoc.FactLineItem: COMMIT
+2021-02-18 01:44:38.731323 (Thread-3): SQL status: SUCCESS 1 in 0.32 seconds
+2021-02-18 01:44:38.739387 (Thread-3): finished collecting timing info
+2021-02-18 01:44:38.740369 (Thread-3): On model.dbtpoc.FactLineItem: Close
+2021-02-18 01:44:39.022780 (Thread-3): Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'c217089c-a12e-4d5b-9d5a-cba0b8424638', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000013FEA509E88>]}
+2021-02-18 01:44:39.025771 (Thread-3): 19:44:39 | 2 of 2 OK created incremental model dbt_jkolpak.FactLineItem......... [SUCCESS 0 in 5.55s]
+2021-02-18 01:44:39.029015 (Thread-3): Finished running node model.dbtpoc.FactLineItem
+2021-02-18 01:44:39.103042 (MainThread): Acquiring new snowflake connection "master".
+2021-02-18 01:44:39.103042 (MainThread): Using snowflake connection "master".
+2021-02-18 01:44:39.103042 (MainThread): On master: BEGIN
+2021-02-18 01:44:39.103042 (MainThread): Opening a new connection, currently in state closed
+2021-02-18 01:44:40.207212 (MainThread): SQL status: SUCCESS 1 in 1.10 seconds
+2021-02-18 01:44:40.207212 (MainThread): On master: COMMIT
+2021-02-18 01:44:40.208209 (MainThread): Using snowflake connection "master".
+2021-02-18 01:44:40.208209 (MainThread): On master: COMMIT
+2021-02-18 01:44:40.611566 (MainThread): SQL status: SUCCESS 1 in 0.40 seconds
+2021-02-18 01:44:40.612564 (MainThread): On master: Close
+2021-02-18 01:44:40.870642 (MainThread): 19:44:40 | 
+2021-02-18 01:44:40.872637 (MainThread): 19:44:40 | Finished running 1 table model, 1 incremental model in 15.95s.
+2021-02-18 01:44:40.873714 (MainThread): Connection 'master' was properly closed.
+2021-02-18 01:44:40.874037 (MainThread): Connection 'list_DBT_POC' was properly closed.
+2021-02-18 01:44:40.874037 (MainThread): Connection 'list_DBT_POC_dbt_jkolpak' was properly closed.
+2021-02-18 01:44:40.874037 (MainThread): Connection 'model.dbtpoc.DimSupplier' was properly closed.
+2021-02-18 01:44:40.874628 (MainThread): Connection 'model.dbtpoc.FactLineItem' was properly closed.
+2021-02-18 01:44:40.892579 (MainThread): 
+2021-02-18 01:44:40.893795 (MainThread): Completed successfully
+2021-02-18 01:44:40.895388 (MainThread): 
+Done. PASS=2 WARN=0 ERROR=0 SKIP=0 TOTAL=2
+2021-02-18 01:44:40.896572 (MainThread): Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000013FEA762A48>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000013FEA2BF908>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000013FEA390148>]}
+2021-02-18 01:44:40.896792 (MainThread): Flushing usage events
